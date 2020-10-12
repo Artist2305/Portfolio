@@ -1,5 +1,5 @@
 ﻿import React, { Component } from 'react';
-import '../css/StyleSheet.css';
+import '../css/Background.css';
 
 export default class LogoBackground extends Component {
     render() {

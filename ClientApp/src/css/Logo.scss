@@ -1,0 +1,25 @@
+﻿@import 'Variables';
+@import 'Global';
+
+.logo {
+    @include marg-pad((10px 8px 10px 8px),(10px 8px 10px 8px));
+}
+.name {
+    @include marg-pad((14px 8px 1px 3px),(14px 8px 1px 3px));
+    font-family: Bahnschrift;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.proffesion {
+    @include marg-pad((2px 8px 10px 3px),(2px 8px 10px 3px));
+    font-family: Bahnschrift;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 3px;
+}
+

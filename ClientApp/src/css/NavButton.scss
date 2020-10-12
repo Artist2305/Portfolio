@@ -1,0 +1,18 @@
+﻿@import 'Variables';
+@import 'Global';
+
+.menu-text {
+    @include marg-pad((10px 6px 10px 8px),(10px 6px 10px 8px));
+    @include transform(relative, 64px, 64px, 0px, unset, 0px);
+    font-family: Bahnschrift;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: $text-color;
+}
+
+.menu-btn {
+    @include marg-pad((10px 23px 10px 6px),(10px 23px 10px 6px));
+    @include transform(relative, 64px, 64px, 0px, unset, 0px);
+}
