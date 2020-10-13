@@ -23,3 +23,16 @@
     letter-spacing: 3px;
 }
 
+@media only screen and (max-width:700px) {
+    .name, .proffesion {
+        display: none;
+    }
+    .logo {
+        @include marg-pad((4px),(4px));
+        & > img {
+            width: 43px;
+            height: 45px;
+        }
+    }
+}
+
