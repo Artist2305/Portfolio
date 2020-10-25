@@ -12,6 +12,7 @@ export default class App extends React.Component {
           <React.Fragment>
               <LogoBackground />
               <Landing />
+
           </React.Fragment>
     );
   }

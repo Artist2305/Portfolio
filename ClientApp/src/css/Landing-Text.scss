@@ -1,0 +1,66 @@
+﻿@import 'Global';
+
+.landing-text-container {
+    @include transform(relative, 100%, 100vh, unset, unset, unset);
+    @include marg-pad(0, 0);
+    min-height: 770px;
+}
+
+.landing-text {
+    @include marg-pad((auto 110px auto 110px), unset);
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width:820px;
+
+    & > h1 {
+        font-size: 4.5rem;
+        margin-top: 0;
+        margin-bottom: 15px;
+
+    }
+
+    &:nth-child(1), & :nth-child(3) {
+        font-size: 1.2rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        letter-spacing: 0.15rem;
+        font-weight: bold;
+    }
+
+    &:nth-child(1){
+        font-weight:normal;
+    }
+}
+
+@media only screen and (max-width: 770px){
+    .landing-text {
+        @include marg-pad((auto 70px auto 70px), unset);
+
+        & > h1 {
+            font-size: 4.0rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .landing-text-container {
+        min-height: 460px;
+    }
+    .landing-text {
+        @include marg-pad((auto 16px auto 16px), unset);
+        max-width: 650px;
+
+        & > h1 {
+            font-size: 2rem;
+        }
+
+        &:nth-child(1), & :nth-child(3) {
+            font-size: 0.9rem;
+            letter-spacing: 0.10rem;
+        }
+    }
+}
