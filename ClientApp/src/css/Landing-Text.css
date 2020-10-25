@@ -176,6 +176,23 @@ body {
   }
 
   .landing-text {
+    margin: auto 36px auto 36px;
+    padding: unset;
+    max-width: 650px;
+  }
+  .landing-text > h1 {
+    font-size: 3rem;
+  }
+  .landing-text:nth-child(1), .landing-text :nth-child(3) {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .landing-text-container {
+    min-height: 460px;
+  }
+
+  .landing-text {
     margin: auto 16px auto 16px;
     padding: unset;
     max-width: 650px;

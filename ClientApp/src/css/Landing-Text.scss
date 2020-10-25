@@ -51,6 +51,24 @@
         min-height: 460px;
     }
     .landing-text {
+        @include marg-pad((auto 36px auto 36px), unset);
+        max-width: 650px;
+
+        & > h1 {
+            font-size: 3rem;
+        }
+
+        &:nth-child(1), & :nth-child(3) {
+            font-size: 1.1rem;
+        }
+    }
+}
+@media only screen and (max-width: 420px) {
+    .landing-text-container {
+        min-height: 460px;
+    }
+
+    .landing-text {
         @include marg-pad((auto 16px auto 16px), unset);
         max-width: 650px;
 
