@@ -50,11 +50,13 @@ body {
 .left-corner-wrap {
     @include transform(fixed, 560px, 190px, 0px, 0px, unset);
     filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
+    z-index:10;
 }
 
 .right-corner-wrap {
     @include transform(fixed, 475px, 180px, 0px, unset, 0px);
     filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
+    z-index:10;
 }
 
 .left-corner {

@@ -1,6 +1,8 @@
 .landing-container {
   min-height: 770px;
   min-width: 300px;
+  display: flex;
+  align-items: center;
 }
 
 @media only screen and (max-width: 700px) {

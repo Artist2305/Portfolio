@@ -1,0 +1,40 @@
+﻿.squares-background-container {
+    position: absolute;
+    max-width: 1340px;
+    width: 90%;
+    height: 640px;
+    box-sizing: border-box;
+
+}
+@media (max-aspect-ratio: 1/1) {
+    .squares-background-container{
+
+    }
+}
+
+@media only screen and (max-width:1350px) {
+    .squares-background-container {
+        
+    }
+}
+@media only screen and (max-width:1100px) {
+    .squares-background-container {
+        ;
+    }
+}
+@media only screen and (max-width:870px) {
+    .squares-background-container {
+        
+    }
+}
+@media only screen and (max-width:700px) {
+    .squares-background-container {
+     
+        height: 320px;
+    }
+}
+@media only screen and (max-width:700px) {
+    .squares-background-container {
+        left:-45px;
+    }
+}
