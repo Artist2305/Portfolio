@@ -4,15 +4,18 @@
   width: 90%;
   height: 640px;
   box-sizing: border-box;
+  top: 80px;
+  left: 0px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1350px) {
   .squares-background-container {
-    height: 320px;
+    top: unset;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 699px) {
   .squares-background-container {
     left: -45px;
+    height: 320px;
   }
 }

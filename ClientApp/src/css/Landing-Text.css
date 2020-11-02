@@ -80,6 +80,42 @@ body {
   right: 0px;
 }
 
+.section-title {
+  margin: 15px 0 0 0;
+  padding: 65px 20px 65px 20px;
+  position: relative;
+  max-width: 1500px;
+  margin: 0;
+  max-height: 50px;
+}
+.section-title > h2 {
+  margin: 0;
+  padding: 0;
+  color: #424242;
+  font-weight: 900;
+  font-size: 2.2rem;
+  max-width: 670px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 540px) {
+  .section-title {
+    margin: 15px 0 0 0;
+    padding: 45px 20px 45px 20px;
+  }
+  .section-title > h2 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .section-title {
+    margin: 15px 0 0 0;
+    padding: 25px 20px 25px 20px;
+  }
+  .section-title > h2 {
+    font-size: 1.1rem;
+  }
+}
 @media only screen and (max-width: 700px) {
   .left-corner-wrap {
     position: fixed;
@@ -137,8 +173,6 @@ body {
 }
 
 .landing-text {
-  margin: auto 110px auto 110px;
-  padding: unset;
   position: relative;
   box-sizing: border-box;
   overflow-x: hidden;
@@ -162,10 +196,6 @@ body {
 }
 
 @media only screen and (max-width: 770px) {
-  .landing-text {
-    margin: auto 70px auto 70px;
-    padding: unset;
-  }
   .landing-text > h1 {
     font-size: 4rem;
     margin-top: 0;
@@ -178,8 +208,6 @@ body {
   }
 
   .landing-text {
-    margin: auto 36px auto 36px;
-    padding: unset;
     max-width: 650px;
   }
   .landing-text > h1 {
@@ -195,8 +223,6 @@ body {
   }
 
   .landing-text {
-    margin: auto 16px auto 16px;
-    padding: unset;
     max-width: 650px;
   }
   .landing-text > h1 {

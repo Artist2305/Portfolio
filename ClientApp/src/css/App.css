@@ -160,15 +160,39 @@ body {
     right: 0px;
   }
 }
-.landing-container {
-  min-height: 770px;
-  min-width: 300px;
-  display: flex;
-  align-items: center;
+.app-container {
+  margin: auto 110px auto 110px;
+  padding: unset;
 }
 
+.app-wrap {
+  margin: 0;
+  padding: 0;
+  max-width: 1450px;
+  width: 100%;
+  z-index: 5;
+}
+
+@media only screen and (max-width: 770px) {
+  .app-container {
+    margin: auto 70px auto 70px;
+    padding: unset;
+  }
+  .app-container > h1 {
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
 @media only screen and (max-width: 700px) {
-  .landing-container {
-    min-height: 460px;
+  .app-container {
+    margin: auto 36px auto 36px;
+    padding: unset;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .app-container {
+    margin: auto 16px auto 16px;
+    padding: unset;
   }
 }

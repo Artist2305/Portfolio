@@ -160,15 +160,33 @@ body {
     right: 0px;
   }
 }
-.landing-container {
-  min-height: 770px;
-  min-width: 300px;
-  display: flex;
-  align-items: center;
+.projects-container {
+  padding-top: 75px;
+  width: 100%;
+  z-index: 5;
+}
+.projects-container > h2 {
+  color: #424242;
+  font-weight: 900;
+  font-size: 2.2rem;
+  max-width: 500px;
+  width: 100%;
+  letter-spacing: 3px;
 }
 
-@media only screen and (max-width: 700px) {
-  .landing-container {
-    min-height: 460px;
+.projects {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+@media only screen and (max-width: 1500px) {
+  .project-wrap {
+    margin: auto 20px auto 20px;
+    padding: unset;
+  }
+}
+@media only screen and (max-width: 1030px) {
+  .projects {
+    grid-template-columns: auto;
   }
 }

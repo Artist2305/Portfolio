@@ -19,10 +19,10 @@ const useWindowSize = () => {
 }
 
 const getModifier = () => {
-    if (window.innerWidth >= 1350) {
+    if (window.innerWidth >= 1370) {
         return 1;
     }
-    else if (window.innerWidth < 1350 && window.innerWidth >= 1100) {
+    else if (window.innerWidth < 1370 && window.innerWidth >= 1100) {
         return 0.8;
     }
     else if (window.innerWidth < 1100 && window.innerWidth >= 700) {

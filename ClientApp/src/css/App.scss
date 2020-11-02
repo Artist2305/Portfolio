@@ -1,0 +1,42 @@
+﻿@import 'Variables';
+@import 'Global';
+
+
+.app-container {
+    @include marg-pad((auto 110px auto 110px), unset);
+}
+
+.app-wrap {
+    @include marg-pad((0),(0));
+    max-width: 1450px;
+    width: 100%;
+    z-index: 5;
+}
+
+
+
+
+
+@media only screen and (max-width: 770px) {
+    .app-container {
+        @include marg-pad((auto 70px auto 70px), unset);
+
+        & > h1 {
+            font-size: 4.0rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .app-container {
+        @include marg-pad((auto 36px auto 36px), unset);
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .app-container {
+        @include marg-pad((auto 16px auto 16px), unset);
+    }
+}
