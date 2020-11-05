@@ -1,0 +1,208 @@
+﻿@import 'Variables';
+@import 'Global';
+
+.about-me-container{
+    margin-top:60px;
+}
+
+.about-me-desc {
+    position: relative;
+    color: $text-color;
+    font-weight: 700;
+    text-align: center;
+
+    & > p:nth-child(1) {
+        font-size: 2.5rem;
+    }
+
+    & > p:nth-child(2) {
+        font-size: 1.8rem;
+    }
+}
+
+.about-me-element {
+    @include marg-pad((10px),(10px));
+    & h5 {
+        @include marg-pad(0,0);
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    & p {
+        font-weight: 900;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+.underline-square{
+    margin-top:10px;
+    height: 17px;
+    width: 250px;
+    background-color: $second-color;
+}
+
+
+
+.square{
+    transform: rotateZ('45deg');
+    position: absolute;
+    z-index:-1;
+}
+
+.square-1{
+    left:0px;
+    top:0px;
+    width:256px;
+    height:256px;
+    background-color: $third-color;
+}
+.square-2{
+    width: 390px;
+    height: 390px;
+    background-color: $second-color;
+}
+.square-3 {
+    bottom: 0;
+    right: 0;
+    width: 256px;
+    height: 256px;
+    background-color: $first-color;
+}
+.about-me-details {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+@media only screen and (max-width:1300px) {
+    .square-1 {
+        width: 200px;
+        height: 200px;
+    }
+    .square-2 {
+        width: 300px;
+        height: 300px;
+    }
+    .square-3 {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width:1110px) {
+    .about-me-details {
+        margin-top: 100px;
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .about-me-desc {
+        & > p:nth-child(1) {
+            font-size: 1.8rem;
+        }
+
+        & > p:nth-child(2) {
+            font-size: 1.4rem;
+        }
+    }
+    .about-me-element {
+        & h5 {
+            font-size: 1.1rem;
+        }
+        & p {
+            font-size: 1.3rem;
+        }
+    }
+    .square-1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .square-2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .square-3 {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media only screen and (max-width:700px) {
+    .about-me-desc {
+        & > p:nth-child(1) {
+            font-size: 1.5rem;
+        }
+
+        & > p:nth-child(2) {
+            font-size: 1.2rem;
+        }
+    }
+
+    .about-me-element {
+
+        & h5 {
+            font-size: 1rem;
+        }
+
+        & p {
+            font-size: 1.15rem;
+        }
+    }
+
+    .square-1 {
+        width: 125px;
+        height: 125px;
+    }
+
+    .square-2 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .square-3 {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media only screen and (max-width:370px) {
+    .about-me-desc {
+        & > p:nth-child(1) {
+            font-size: 1.2rem;
+        }
+
+        & > p:nth-child(2) {
+            font-size: 0.9rem;
+        }
+    }
+
+    .about-me-element {
+        @include marg-pad((0px),(0px));
+
+        & h5 {
+            font-size: 0.9rem;
+        }
+
+        & p {
+            font-size: 1rem;
+        }
+    }
+
+    .square-1 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .square-2 {
+        width: 170px;
+        height: 170px;
+    }
+
+    .square-3 {
+        width: 100px;
+        height: 100px;
+    }
+}

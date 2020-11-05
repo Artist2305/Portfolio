@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,6 +34,11 @@ body {
 .center-vert {
   display: flex;
   justify-content: center;
+}
+
+.center-horz {
+  display: flex;
+  align-items: center;
 }
 
 .left-corner-wrap {
@@ -223,7 +229,7 @@ body {
   }
 
   .landing-text {
-    max-width: 650px;
+    max-width: 80vw;
   }
   .landing-text > h1 {
     font-size: 2rem;

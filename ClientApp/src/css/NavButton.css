@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,6 +34,11 @@ body {
 .center-vert {
   display: flex;
   justify-content: center;
+}
+
+.center-horz {
+  display: flex;
+  align-items: center;
 }
 
 .left-corner-wrap {

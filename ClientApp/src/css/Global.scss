@@ -48,6 +48,10 @@ body {
     display: flex;
     justify-content: center;
 }
+.center-horz {
+    display: flex;
+    align-items: center;
+}
 
 .left-corner-wrap {
     @include transform(fixed, 560px, 190px, 0px, 0px, unset);

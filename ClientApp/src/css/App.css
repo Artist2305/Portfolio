@@ -36,6 +36,11 @@ body {
   justify-content: center;
 }
 
+.center-horz {
+  display: flex;
+  align-items: center;
+}
+
 .left-corner-wrap {
   position: fixed;
   width: 560px;
