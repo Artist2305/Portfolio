@@ -1,2 +1,203 @@
 ﻿@import 'Variables';
 @import 'Global';
+
+.lob-container{
+    margin-top:70px;
+}
+
+.lob-img-container {
+    position: relative;
+    width: 90px;
+    height: 90px;
+
+    & > img {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.lob-mob-text {
+    & > p {
+        display: none;
+    }
+}
+
+.lob-text {
+    & > p:nth-child(1) {
+        @include marg-pad((3px 5px 5px 10px),(3px 5px 5px 10px));
+        font-size: 1.15rem;
+        letter-spacing: 4px;
+        font-weight: 900;
+    }
+
+    & > h3 {
+        @include marg-pad((0px 5px 0px 10px),(0px 5px 0px 10px));
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    & > p:nth-child(3) {
+        @include marg-pad((5px 5px 3px 10px),(5px 5px 3px 10px));
+        font-size: 0.9rem;
+        letter-spacing: 4px;
+        font-weight: 900;
+    }
+}
+.dec-wrap{
+    position:relative;
+}
+.decorative-square{
+    z-index:-2;
+    position:absolute;
+    left:0;
+    height:100px;
+}
+.sq-1{
+    width:315px;
+    background-color:$first-color;
+}
+.sq-2 {
+    width: 165px;
+    background-color: $second-color;
+}
+.sq-3 {
+    width: 490px;
+    background-color: $third-color;
+}
+
+.blog-article {
+    display: grid;
+    grid-template-columns: 0px 70px auto;
+    @include marg-pad((0),(5px));
+}
+
+
+@media only screen and (max-width:1000px){
+    .lob-text {
+        & > p:nth-child(1) {
+            font-size: 1.00rem;
+        }
+
+        & > h3 {
+            font-size: 1.3rem;
+        }
+
+        & > p:nth-child(3) {
+            font-size: 0.8rem;
+        }
+    }
+    .lob-img-container {
+        width: 80px;
+        height: 80px;
+
+        & > img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+    .decorative-square {
+        height: 90px;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .lob-text {
+        & > p:nth-child(1) {
+            @include marg-pad((1px 5px 3px 5px),(1px 5px 3px 5px));
+            font-size: 0.90rem;
+        }
+
+        & > h3 {
+            @include marg-pad((0px 5px 0px 5px),(0px 5px 0px 5px));
+            font-size: 1.2rem;
+        }
+
+        & > p:nth-child(3) {
+            @include marg-pad((3px 5px 1px 5px),(3px 5px 1px 5px));
+            font-size: 0.8rem;
+        }
+    }
+
+    .lob-img-container {
+        width: 70px;
+        height: 70px;
+
+        & > img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    .decorative-square {
+        height: 75px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .sq-1 {
+        width: 165px;
+    }
+
+    .sq-2 {
+        width: 85px;
+    }
+
+    .sq-3 {
+        width: 250px;
+    }
+}
+@media only screen and (max-width:370px) {
+    .lob-text { 
+        & > p:nth-child(1) {
+            display: none;
+        }
+
+        & > h3 {
+            font-size: 1rem;
+        }
+
+        & > p:nth-child(3) {
+            display: none;
+        }
+    }
+
+    .lob-img-container {
+        width: 60px;
+        height: 60px;
+
+        & > img {
+            width: 55px;
+            height: 55px;
+        }
+    }
+
+    .decorative-square {
+        height: 65px;
+    }
+    .blog-article {
+        display: grid;
+        grid-template-columns: 0px 70px auto;
+
+        & > div:nth-child(4) > p {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        & > div:nth-child(4) > p:nth-child(1) {
+            margin-top: 10px;
+            margin-bottom: 1px;
+        }
+
+        & > div:nth-child(4) > p:nth-child(2) {
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+    }
+    .lob-mob-text {
+        grid-column-end: span 3;
+    }
+}

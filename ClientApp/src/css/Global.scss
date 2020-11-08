@@ -38,6 +38,10 @@ body {
     flex-wrap: wrap;
     justify-content: flex-end;
 }
+.align-content-left {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
 .center-all {
     display: flex;
     justify-content: center;
