@@ -1,11 +1,11 @@
 ﻿.squares-background-container {
-    position: absolute;
+    position: relative;
     max-width: 1340px;
-    width: 90%;
+    width: 0px;
     height: 640px;
     box-sizing: border-box;
-    top:80px;
-    left:0px;
+    top:-20px;
+    left:-100px;
 }
 
 @media only screen and (max-width:1350px) {
@@ -17,6 +17,12 @@
 @media only screen and (max-width:699px) {
     .squares-background-container {
         left: -45px;
+        height: 320px;
+    }
+}
+@media only screen and (max-width:370px) {
+    .squares-background-container {
+        left: -60px;
         height: 320px;
     }
 }
