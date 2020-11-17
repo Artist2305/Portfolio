@@ -8,7 +8,7 @@ export default class Logo extends Component {
         return (
             <React.Fragment>
                 <div className="left-corner-wrap">
-                    <div className="left-corner">
+
                         <div className="row">
                             <div className="col">
                                 <div className="logo">
@@ -17,14 +17,14 @@ export default class Logo extends Component {
                             </div>
                             <div className="col">
                                 <div className="row">
-                                    <div className="name">Mateusz Szostek</div>
+                                <div className={"name" + (this.props.isMenuActive ? " active" : "")}>Mateusz Szostek</div>
                                 </div>
                                 <div className="row">
-                                    <div className="proffesion">SOFTWARE DEVELOPER</div>
+                                <div className={"proffesion" + (this.props.isMenuActive ? " active" : "")}>SOFTWARE DEVELOPER</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
                 </div>
             </React.Fragment>
         );

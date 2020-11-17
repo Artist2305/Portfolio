@@ -12,9 +12,67 @@
     color: $text-color;
 }
 
-.menu-btn {
-    @include marg-pad((10px 23px 10px 6px),(10px 23px 10px 6px));
-    @include transform(relative, 64px, 64px, 0px, unset, 0px);
+.menu-button {
+    margin-top: 33px;
+    margin-right: 33px;
+    position: relative;
+    width: 40px;
+    height: 36px;
+    cursor: pointer;
+
+    & > div:nth-child(1) {
+        top: 0;
+    }
+
+    & > div:nth-child(2) {
+        top: 15px;
+    }
+
+    & > div:nth-child(3) {
+        top: 30px;
+    }
+
+    &.hover > div:nth-child(1) {
+        transform: translateY(-3px);
+        background-color: #686868;
+    }
+
+    &.hover > div:nth-child(2) {
+        background-color: #686868;
+    }
+
+    &.hover > div:nth-child(3) {
+        transform: translateY(3px);
+        background-color: #686868;
+    }
+
+    &.open > div:nth-child(1) {
+        background-color: $background-color;
+        transform: rotate(45deg) translateY(14.5px) translateX(7px);
+    }
+
+    &.open > div:nth-child(2) {
+        background-color: transparent;
+        transform: translateX(-50px);
+    }
+
+    &.open > div:nth-child(3) {
+        background-color: $background-color;
+        transform: rotate(-45deg) translateY(-14.5px) translateX(7px);
+    }
+}
+
+
+
+.menu-element {
+    @include marg-pad(0,0);
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    left: 0;
+    background-color: $text-color;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 @media only screen and (max-width:700px) {
@@ -22,9 +80,11 @@
         visibility:hidden;
         position:fixed;
     }
-
-    .menu-btn {
-        @include transform(relative, 48px, 48px, 0px, unset, 0px);
-        @include marg-pad((3px 4px 3px 4px),(3px 4px 3px 4px));
+    .menu-button {
+        margin-top: 15px;
+        margin-right: 10px;
     }
 }
+
+
+

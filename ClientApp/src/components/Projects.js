@@ -34,7 +34,7 @@ const Projects = (props) => {
     const [modifier] = useModifier();
     const squares = titleSquareData_1;
     return (
-        <div className="col center-all">
+        <div className="col center-all" id="projectsSection">
             <div className="projects-container col">
                 <SectionTitle item={squares} modifier={modifier}/> 
                 <div className="projects">

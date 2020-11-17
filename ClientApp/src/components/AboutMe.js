@@ -10,7 +10,7 @@ const AboutMe = () => {
     }
 
     return (
-        <div className="about-me-container">
+        <div className="about-me-container" id="aboutMeSection">
             <div className="section-title">
                 <h2>ABOUT ME</h2>
             </div> 

@@ -11,6 +11,11 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 29px;
+    transition: .4s;
+
+    &.active {
+        color: $background-color;
+    }
 }
 
 .proffesion {
@@ -21,6 +26,11 @@
     font-size: 11px;
     line-height: 13px;
     letter-spacing: 3px;
+    transition: .4s;
+
+    &.active {
+        color: $background-color;
+    }
 }
 
 @media only screen and (max-width:700px) {

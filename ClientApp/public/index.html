@@ -15,27 +15,5 @@
         You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <script>
-        const body = document.body,
-            scrollWrap = document.getElementById("app-scroll-area"),
-            console.log(scrollWrap.classList);
-            height = scrollWrap.getBoundingClientRect().height - 1,
-            speed = 0.04;
-
-        var offset = 0;
-
-        body.style.height = Math.floor(height) + "px";
-
-        function smoothScroll() {
-            offset += (window.pageYOffset - offset) * speed;
-
-            var scroll = "translateY(-" + offset + "px) translateZ(0)";
-            scrollWrap.style.transform = scroll;
-
-            callScroll = requestAnimationFrame(smoothScroll);
-        }
-
-        smoothScroll();
-    </script>
 </body>
 </html>

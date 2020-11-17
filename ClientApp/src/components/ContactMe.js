@@ -8,10 +8,10 @@ const ContactMe = () => {
             <div className="contact-me-container">
                 <div className="col">
                     <div className="contact-title">
-                        <div classname="row">
+                        <div className="row">
                             <h2>LET'S WORK TOGETHER</h2>
                         </div>
-                        <div classname="row">
+                        <div className="row">
                             <div className="line-1"></div>
                             <div className="line-2"></div>
                             <div className="line-3"></div>
@@ -27,16 +27,16 @@ const ContactMe = () => {
                         <div className="row">
                             <form action="" className="contact-form">
                                 <div className="col">
-                                    <label for="name">Your Name</label>
+                                    <label >Your Name</label>
                                     <input type="text" id="name" name="name" placeholder="What's Your name?"></input>
                                 </div>
                                 <div className="col">
-                                    <label for="emailAddress">Your email address</label>
+                                    <label >Your email address</label>
                                     <input type="text" id="emailAddress" name="emailAddress" placeholder="What's Your email address?"></input>
                                 </div>
                                 <div className="col">
-                                    <label for="message">Message</label>
-                                    <textarea for="message" name="message" placeholder="What's Your message?"></textarea>
+                                    <label >Message</label>
+                                    <textarea name="message" placeholder="What's Your message?"></textarea>
                                     <button className="send-button row center-horz">
                                         <div><img src={post}></img></div>
                                         <div><span>SEND MESSAGE</span></div>
