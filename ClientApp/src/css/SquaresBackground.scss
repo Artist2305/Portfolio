@@ -4,8 +4,26 @@
     width: 0px;
     height: 640px;
     box-sizing: border-box;
-    top:-20px;
-    left:-100px;
+    top: -20px;
+    left: -100px;
+
+    @for $i from 22 to 1 {
+        & > .square-move:nth-child(23n - #{$i}) {
+            animation-delay: ($i / 10) + s;
+
+            & > .square-rotate {
+                animation-delay: ($i / 10) + s;
+
+                & > .square-color {
+                    animation-delay: ($i / 10) + s;
+                }
+
+                & > .square-flash {
+                    animation-delay: (3 + ($i / 10)) + s;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width:1350px) {

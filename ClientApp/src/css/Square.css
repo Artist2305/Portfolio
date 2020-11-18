@@ -1,7 +1,109 @@
-.square {
+.square-move {
   position: absolute;
-  transform: rotate(45deg);
   z-index: 0;
   margin: 0;
   padding: 0;
+  animation: square-fade-in-anim 1s ease-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+.square-rotate {
+  position: absolute;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  animation: square-rotate-anim 1.3s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.square-color {
+  position: absolute;
+  transform: rotate(45deg);
+  left: -60px;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  animation: square-color-anim 1.3s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.square-flash {
+  animation: square-flash-anim 4s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.square-color.color-1 {
+  background-color: #BC8ED9;
+}
+
+.square-color.color-2 {
+  background-color: #F28E8E;
+}
+
+.square-color.color-3 {
+  background-color: #5DAEEA;
+}
+
+@keyframes square-rotate-anim {
+  0% {
+    transform: rotateY(0deg);
+  }
+  33% {
+    transform: rotateY(120deg);
+  }
+  66% {
+    transform: rotateY(240deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes square-color-anim {
+  0% {
+    filter: brightness(100%);
+  }
+  24.9% {
+    filter: brightness(115%);
+  }
+  25% {
+    filter: brightness(50%);
+  }
+  50% {
+    filter: brightness(100%);
+  }
+  74.9% {
+    filter: brightness(115%);
+  }
+  75% {
+    filter: brightness(50%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+@keyframes square-flash-anim {
+  0% {
+    filter: brightness(100%);
+  }
+  20% {
+    filter: brightness(115%);
+  }
+  100% {
+    filter: brightness(100%);
+  }
+}
+@keyframes square-fade-in-anim {
+  0% {
+    transform: translateX(-100vw);
+    visibility: visible;
+  }
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+  }
 }
