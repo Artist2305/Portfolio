@@ -21,29 +21,32 @@
     cursor: pointer;
 
     & > div:nth-child(1) {
+        background-color: $first-color;
         top: 0;
     }
 
     & > div:nth-child(2) {
+        background-color: $second-color;
         top: 15px;
     }
 
     & > div:nth-child(3) {
+        background-color: $third-color;
         top: 30px;
     }
 
     &.hover > div:nth-child(1) {
         transform: translateY(-3px);
-        background-color: #686868;
+        filter: brightness(80%);
     }
 
     &.hover > div:nth-child(2) {
-        background-color: #686868;
+        filter: brightness(80%);
     }
 
     &.hover > div:nth-child(3) {
         transform: translateY(3px);
-        background-color: #686868;
+        filter: brightness(80%);
     }
 
     &.open > div:nth-child(1) {

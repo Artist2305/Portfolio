@@ -1,15 +1,15 @@
-.square-move {
+.square-move.active {
   position: absolute;
   z-index: 0;
   margin: 0;
   padding: 0;
-  animation: square-fade-in-anim 1s ease-out;
+  animation: square-fade-in-anim 0.5s ease-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
 
-.square-rotate {
+.square-rotate.active {
   position: absolute;
   z-index: 0;
   margin: 0;
@@ -19,7 +19,7 @@
   animation-fill-mode: forwards;
 }
 
-.square-color {
+.square-color.active {
   position: absolute;
   transform: rotate(45deg);
   left: -60px;
@@ -29,12 +29,7 @@
   animation: square-color-anim 1.3s linear;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
-
-.square-flash {
-  animation: square-flash-anim 4s linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
 }
 
 .square-color.color-1 {
@@ -65,36 +60,25 @@
 }
 @keyframes square-color-anim {
   0% {
-    filter: brightness(100%);
+    filter: brightness(100%) drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
   }
   24.9% {
-    filter: brightness(115%);
+    filter: brightness(115%) drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
   }
   25% {
-    filter: brightness(50%);
+    filter: brightness(50%) drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
   }
   50% {
-    filter: brightness(100%);
+    filter: brightness(100%) drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
   }
   74.9% {
-    filter: brightness(115%);
+    filter: brightness(115%) drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
   }
   75% {
-    filter: brightness(50%);
+    filter: brightness(50%) drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
   }
   100% {
-    filter: brightness(100%);
-  }
-}
-@keyframes square-flash-anim {
-  0% {
-    filter: brightness(100%);
-  }
-  20% {
-    filter: brightness(115%);
-  }
-  100% {
-    filter: brightness(100%);
+    filter: brightness(100%) drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
   }
 }
 @keyframes square-fade-in-anim {

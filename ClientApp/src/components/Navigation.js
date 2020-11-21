@@ -43,7 +43,6 @@ export default class Navigation extends Component {
         window.scrollBy(0, amount);
         this.setState({ menuActive: false });
         menuOpen = false;
-        console.log(amount);
     }
  
         render() {

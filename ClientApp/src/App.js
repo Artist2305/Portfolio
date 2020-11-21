@@ -8,6 +8,7 @@ import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
 import './css/App.css';
 import Navigation from './components/Navigation';
+import AppCover from './components/AppCover';
 
 export default class App extends React.Component {
     constructor() {
@@ -24,7 +25,8 @@ export default class App extends React.Component {
             projectsPos: undefined,
             aboutMePos: undefined,
             lastestOnBlogPos: undefined,
-            contactMePos: undefined
+            contactMePos: undefined,
+            isLoading: true
         }
 
     }
@@ -40,6 +42,7 @@ export default class App extends React.Component {
         window.addEventListener("resize", this.handlePosition);
         window.addEventListener("scroll", this.handlePosition);
         window.addEventListener("click", this.handlePosition);
+        this.loading();
     }
 
     componentWillUnmount() {
@@ -56,21 +59,27 @@ export default class App extends React.Component {
             contactMePos: this.contactMeRef.current.getBoundingClientRect().y
         })
     };
-         
-   
 
-    componentDidUpdate() {
-        // we can use this.inputRef.current to access DOM element
+    loading = () => {
+        setTimeout(() => {
+            this.setState({
+                isLoading: false
+            });
+            console.log("ustawiam false")
+            // if (this.state.isLoading == false)
+            //    this.setState.isDisable = true;
+        }, 4000);
     }
 
   static displayName = App.name;
 
     render() {
-      return (
+        return (
           <React.Fragment>
               <LogoBackground />
               <div className="app-container center-all">
                   <div className="app-wrap">
+                      <AppCover isLoading={this.state.isLoading} />
                       <Navigation
                           landingPos={this.state.landingPos}
                           projectsPos={this.state.projectsPos}
@@ -78,12 +87,12 @@ export default class App extends React.Component {
                           lastestOnBlogPos={this.state.lastestOnBlogPos}
                           contactMePos={this.state.contactMePos}
                       />
-                      <div ref={this.landingRef}><Landing /></div>
+                        <div ref={this.landingRef}> <Landing isLoading={this.state.isLoading}/></div>
                       <div ref={this.projectsRef}><Projects /></div>
                       <div ref={this.aboutMeRef}><AboutMe /></div>
                       <div ref={this.lastestOnBlogRef}><LastestOnBlog /></div>
                       <div ref={this.contactMeRef}><ContactMe /></div>
-                      <Footer />
+                        <Footer />
                   </div>
               </div> 
           </React.Fragment>

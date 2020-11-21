@@ -9,17 +9,17 @@
 
     @for $i from 22 to 1 {
         & > .square-move:nth-child(23n - #{$i}) {
-            animation-delay: ($i / 10) + s;
+            animation-delay: ($i / 15) + s;
 
             & > .square-rotate {
-                animation-delay: ($i / 10) + s;
+                animation-delay: ($i / 15) + s;
 
                 & > .square-color {
-                    animation-delay: ($i / 10) + s;
+                    animation-delay: ($i / 15) + s;
                 }
 
                 & > .square-flash {
-                    animation-delay: (3 + ($i / 10)) + s;
+                    animation-delay: (3 + ($i / 15)) + s;
                 }
             }
         }
@@ -31,17 +31,23 @@
         top:unset;
     }
 }
+@media only screen and (max-width:770px) {
+    .squares-background-container {
+        left: -70px;
+    }
+}
 
 @media only screen and (max-width:699px) {
     .squares-background-container {
-        left: -45px;
+        left: 0px;
         height: 320px;
     }
 }
 @media only screen and (max-width:370px) {
     .squares-background-container {
-        left: -60px;
+        left: -10px;
         height: 320px;
     }
 }
+
 

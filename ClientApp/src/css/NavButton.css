@@ -151,24 +151,27 @@ body {
   cursor: pointer;
 }
 .menu-button > div:nth-child(1) {
+  background-color: #BC8ED9;
   top: 0;
 }
 .menu-button > div:nth-child(2) {
+  background-color: #F28E8E;
   top: 15px;
 }
 .menu-button > div:nth-child(3) {
+  background-color: #5DAEEA;
   top: 30px;
 }
 .menu-button.hover > div:nth-child(1) {
   transform: translateY(-3px);
-  background-color: #686868;
+  filter: brightness(80%);
 }
 .menu-button.hover > div:nth-child(2) {
-  background-color: #686868;
+  filter: brightness(80%);
 }
 .menu-button.hover > div:nth-child(3) {
   transform: translateY(3px);
-  background-color: #686868;
+  filter: brightness(80%);
 }
 .menu-button.open > div:nth-child(1) {
   background-color: #ECE8DC;

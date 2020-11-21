@@ -1,0 +1,191 @@
+﻿@import 'Variables';
+@import 'Global';
+
+.app-cover-container {
+    min-height:500px;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $text-color;
+    z-index: 40;
+    color: $background-color;
+
+    & > div > div:nth-child(1) {
+        animation: hello-fade-in .5s ease-out normal;
+        animation-fill-mode: forwards;
+        animation-delay: .35s;
+        opacity: 0;
+    }
+
+    & > div > div:nth-child(2) {
+        margin-top:10px;
+        animation: hello-fade-in .5s ease-out normal;
+        animation-fill-mode: forwards;
+        animation-delay: .7s;
+        opacity: 0;
+    }
+
+    & > div > div:nth-child(3) {
+        animation: hello-fade-in .5s ease-out normal;
+        animation-fill-mode: forwards;
+        animation-delay: 1.05s;
+        opacity: 0;
+    }
+
+
+    & > div > div > h1 {
+        width: auto;
+        margin: 0px 10px 10px 10px;
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+        text-align: center;
+
+        & > span {
+            color: $first-color;
+        }
+    }
+
+    &.disable {
+        animation: slide-up 0.3s linear;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+
+        &.disable > div > div:nth-child(1), & > div > div:nth-child(2), & > div > div:nth-child(3), & > div > div:nth-child(4) {
+            animation: fade-off 0.5s linear;
+        }
+    }
+}
+
+.loading-logo {
+
+    & > img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.indicator-wrap {
+    height:150px;
+    position: relative;
+    opacity: 0;
+    animation: indicator-fade-in ease-in 1s;
+    animation-delay: 1.4s;
+    animation-fill-mode: forwards;
+
+    & .loading-indicator:nth-child(1) {
+        background-color: $first-color;
+        animation-fill-mode: forwards;
+        animation: loading-indicator-anim 4s infinite ease-in-out;
+    }
+
+    & .loading-indicator:nth-child(2) {
+        background-color: $second-color;
+        animation-fill-mode: forwards;
+        animation: loading-indicator-anim 4s infinite ease-in-out;
+        animation-delay: 1.333333s;
+    }
+
+    & .loading-indicator:nth-child(3) {
+        background-color: $third-color;
+        animation-fill-mode: forwards;
+        animation: loading-indicator-anim 4s infinite ease-in-out;
+        animation-delay: 2.666666s;
+    }
+}
+
+.loading-indicator {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0.75;
+    transform: rotateZ(45deg);
+}
+
+@media only screen and (max-width: 670px){
+    .app-cover-container {
+        & > div > div > h1 {
+            font-size: 1.7rem;
+            letter-spacing: 4px;
+        }
+    }
+}
+@media only screen and (max-width: 370px) {
+    .app-cover-container {
+        & > div > div > h1 {
+            font-size: 1.6rem;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+@keyframes hello-fade-in {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes indicator-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slide-up {
+    from {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-100vh)
+    }
+}
+
+@keyframes fade-off {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes loading-indicator-anim {
+    0% {
+        transform:translate3d(0,0,0) rotateZ(45deg);
+    }
+    12.5% {
+        transform: translate3d(45px,45px,0) rotateZ(45deg);
+    }
+    25% {
+        transform: translate3d(45px,45px,0) rotateZ(45deg);
+    }
+    37.5% {
+        transform: translate3d(0px,90px,0) rotateZ(45deg);
+    }
+    50% {
+        transform: translate3d(0px,90px,0) rotateZ(45deg);
+    }
+    62.5% {
+        transform: translate3d(-45px,45px,0) rotateZ(45deg);
+    }
+    75% {
+        transform: translate3d(-45px,45px,0) rotateZ(45deg);
+    }
+    87.5% {
+        transform: translate3d(0px,0px,0) rotateZ(45deg);
+    }
+    100% {
+        transform: translate3d(0px,0px,0) rotateZ(45deg);
+    }
+}
