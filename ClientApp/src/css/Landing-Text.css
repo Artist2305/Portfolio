@@ -144,22 +144,40 @@ body {
   overflow-y: hidden;
   max-width: 820px;
 }
-.landing-text > h1 {
+.landing-text.active > h1 {
   font-size: 4.5rem;
   margin-top: 0;
   margin-bottom: 15px;
+  animation: text-fade-in 0.7s ease-out;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
-.landing-text:nth-child(1), .landing-text :nth-child(3) {
+.landing-text.active:nth-child(1), .landing-text.active :nth-child(3) {
   font-size: 1.2rem;
   margin-top: 0;
   margin-bottom: 0;
   letter-spacing: 0.15rem;
   font-weight: bold;
+  animation: text-fade-in 0.7s ease-out;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
-.landing-text:nth-child(1) {
+.landing-text.active:nth-child(1) {
   font-weight: normal;
 }
 
+@keyframes text-fade-in {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media only screen and (max-width: 770px) {
   .landing-text > h1 {
     font-size: 4rem;

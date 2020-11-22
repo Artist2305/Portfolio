@@ -141,12 +141,15 @@
     }
 }
 @keyframes slide-up {
-    from {
+    0% {
         transform: translateY(0)
     }
 
-    to {
+    99% {
         transform: translateY(-100vh)
+    }
+    100% {
+        visibility:hidden;
     }
 }
 

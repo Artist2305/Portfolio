@@ -37,7 +37,7 @@ const Projects = (props) => {
         <div className="col center-all" id="projectsSection">
             <div className="projects-container col">
                 <SectionTitle item={squares} modifier={modifier}/> 
-                <div className="projects">
+                <div className="projects" data-aos="fade-up">
                     <Project />
                     <Project />
                     <Project />

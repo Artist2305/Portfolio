@@ -6,7 +6,7 @@ const Project = () => {
 
         return (
             <React.Fragment>
-                <div className="project">
+                <div className="project" data-aos="fade-up">
                     <h4>2020</h4>
                     <h3>Browser Game</h3>
                     <div className="row">

@@ -11,7 +11,7 @@ export default class AppCover extends Component {
     render() {
         return (
             <div className={"app-cover-container center-all col" + (this.props.isLoading ? "" : " disable")} >
-                <div classname="center-all">
+                <div>
                     <div className="loading-logo center-all">
                         <img src={LogoImg} ></img>
                     </div>

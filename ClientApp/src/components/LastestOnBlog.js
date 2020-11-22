@@ -4,14 +4,15 @@ import img_1 from '../svg/blog_1.svg'
 import img_2 from '../svg/blog_2.svg'
 import img_3 from '../svg/blog_3.svg'
 
-const LastestOnBlog = () => {
 
+
+const LastestOnBlog = () => {
         return (
             <div className="lob-container">
-                <div className="section-title">
+                <div className="section-title" data-aos="fade-up">
                     <h2>LASTEST ON BLOG</h2>
                 </div>
-                <div className="blog-article">
+                <div className="blog-article" data-aos="fade-up">
                     <div className="dec-wrap">
                         <div className="decorative-square sq-1"></div>
                     </div>
@@ -28,7 +29,7 @@ const LastestOnBlog = () => {
                         <p>CHECK LIVE</p>
                     </div>
                 </div>
-                <div className="blog-article">
+                <div className="blog-article" data-aos="fade-up">
                     <div className="dec-wrap">
                         <div className="decorative-square sq-2"></div>
                     </div>
@@ -45,7 +46,7 @@ const LastestOnBlog = () => {
                         <p>CHECK LIVE</p>
                     </div>
                 </div>
-                <div className="blog-article">
+                <div className="blog-article" data-aos="fade-up">
                     <div className="dec-wrap">
                         <div className="decorative-square sq-3"></div>
                     </div>

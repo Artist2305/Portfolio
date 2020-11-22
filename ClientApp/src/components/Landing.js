@@ -14,7 +14,7 @@ export default class Landing extends Component {
             <React.Fragment>
                 <div className="landing-container" id="homeSection">
                     <SquaresBackground isLoading={this.props.isLoading} />
-                    <LandingText />
+                    <LandingText isLoading={this.props.isLoading} />
                 </div>
             </React.Fragment >
         );

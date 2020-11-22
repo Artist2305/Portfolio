@@ -13,7 +13,7 @@ const Project = (props) => {
     }> </div>)
         return (
             <React.Fragment>
-                <div className="section-title">
+                <div className="section-title" data-aos="fade-up">
                     {squares}
 
                     <h2>SELECTED PROJECTS</h2>

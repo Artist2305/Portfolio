@@ -10,19 +10,19 @@ const AboutMe = () => {
     }
 
     return (
-        <div className="about-me-container" id="aboutMeSection">
-            <div className="section-title">
+        <div className="about-me-container" id="aboutMeSection" data-aos="fade-up">
+            <div className="section-title" data-aos="fade-up">
                 <h2>ABOUT ME</h2>
             </div> 
             <div className="col center-all about-me-desc">
-                <p>Duis augue eros, sagittis ac ligula sit amet, porta sollicitudin nisl. Aliquam convallis sollicitudin felis, id suscipit purus dapibus sit amet. Vestibulum eu ultrices lectus. </p>
-                <p>Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. Maecenas semper luctus urna. Praesent dolor sem, consectetur id vulputate at, iaculis et nisi. Nullam dapibus elementum felis vel hendrerit. Ut vulputate rhoncus turpis a molestie.  </p>
+                <p data-aos="fade-up">Duis augue eros, sagittis ac ligula sit amet, porta sollicitudin nisl. Aliquam convallis sollicitudin felis, id suscipit purus dapibus sit amet. Vestibulum eu ultrices lectus. </p>
+                <p data-aos="fade-up">Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. Maecenas semper luctus urna. Praesent dolor sem, consectetur id vulputate at, iaculis et nisi. Nullam dapibus elementum felis vel hendrerit. Ut vulputate rhoncus turpis a molestie.  </p>
                 <div className="square square-1"></div>
                 <div className="square square-2"></div>
                 <div className="square square-3"></div>
             </div>
-            <div className="about-me-details ">
-                <div className="col about-me-element center-horz">
+            <div className="about-me-details " data-aos="fade-up">
+                <div className="col about-me-element center-horz" data-aos="fade-up">
                     <div className="row center-all">
                         <h5>SERVICES I PROVIDE</h5>
                     </div>
@@ -31,7 +31,7 @@ const AboutMe = () => {
                         <p>WEB DESIGN | UX & UI | ICONOGRAPHY | PC, MOBILE & WEB DEVELOPMENT</p>
                     </div> 
                 </div>
-                <div className="col about-me-element center-horz">
+                <div className="col about-me-element center-horz" data-aos="fade-up">
                     <div className="row center-all">
                         <h5>TECHNOLOGIES I USE</h5>
                     </div>
@@ -40,7 +40,7 @@ const AboutMe = () => {
                         <p>C++ | C# | HTML, CSS & JS | SASS | .DOT NET CORE | SQL | BOOTSTRAP | AJAX | GIT | REACT | REDUX</p>
                     </div>
                 </div>
-                <div className="col about-me-element center-horz">
+                <div className="col about-me-element center-horz" data-aos="fade-up">
                     <div className="row center-all">
                         <h5>TOOLS I USE</h5>
                     </div>

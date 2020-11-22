@@ -6,7 +6,7 @@ const ContactMe = () => {
 
         return (
             <div className="contact-me-container">
-                <div className="col">
+                <div className="col" data-aos="fade-up">
                     <div className="contact-title">
                         <div className="row">
                             <h2>LET'S WORK TOGETHER</h2>
@@ -18,23 +18,23 @@ const ContactMe = () => {
                         </div>
                     </div>
                 </div>
-                <div className="form-social-container">
+                <div className="form-social-container" >
                     <div className="col">
-                        <div className="col">
+                        <div className="col" data-aos="fade-up">
                             <h3>FEEL FREE TO CONTACT ME</h3>
                             <p>Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. Maecenas semper luctus urna. Praesent dolor sem, consectetur id vulputate at, iaculis et nisi. </p>
                         </div>
                         <div className="row">
                             <form action="" className="contact-form">
-                                <div className="col">
+                                <div className="col" data-aos="fade-up">
                                     <label >Your Name</label>
                                     <input type="text" id="name" name="name" placeholder="What's Your name?"></input>
                                 </div>
-                                <div className="col">
+                                <div className="col" data-aos="fade-up">
                                     <label >Your email address</label>
                                     <input type="text" id="emailAddress" name="emailAddress" placeholder="What's Your email address?"></input>
                                 </div>
-                                <div className="col">
+                                <div className="col" data-aos="fade-up">
                                     <label >Message</label>
                                     <textarea name="message" placeholder="What's Your message?"></textarea>
                                     <button className="send-button row center-horz">
@@ -46,7 +46,7 @@ const ContactMe = () => {
                             </form>
                         </div>
                     </div>
-                    <div className="col social-media center-all">
+                    <div className="col social-media center-all" data-aos="fade-up">
                         <div className="square-social-background">
                             <div className="sq-s-1"></div>
                             <div className="sq-s-2"></div>

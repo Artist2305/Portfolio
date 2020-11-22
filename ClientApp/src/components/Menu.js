@@ -4,7 +4,7 @@ import '../css/Menu.css';
 export default class Menu extends Component {   
     render() {
         return (
-            <div className="menu-wrap col center-all">
+            <div className={"menu-wrap col center-all" + (this.props.isMenuActive ? " active" : "")}>
                 <div className={"cover" + (this.props.isMenuActive ? " active" : "")}></div>
                 <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
                     <a className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}

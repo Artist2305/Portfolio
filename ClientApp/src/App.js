@@ -1,4 +1,4 @@
-import React, { Component, useRef, useLayoutEffect, useState  } from 'react';
+import React, { useEffect  } from 'react';
 import LogoBackground from './components/LogoBackground';
 import Landing from './components/Landing';
 import Projects from './components/Projects';
@@ -10,7 +10,11 @@ import './css/App.css';
 import Navigation from './components/Navigation';
 import AppCover from './components/AppCover';
 
+import AOS from "aos";
+import 'aos/dist/aos.css'
+
 export default class App extends React.Component {
+
     constructor() {
         super()
 
@@ -30,7 +34,6 @@ export default class App extends React.Component {
         }
 
     }
-
     componentDidMount() {
         this.setState({
             landingPos: this.landingRef.current.getBoundingClientRect().y,
@@ -43,6 +46,7 @@ export default class App extends React.Component {
         window.addEventListener("scroll", this.handlePosition);
         window.addEventListener("click", this.handlePosition);
         this.loading();
+        AOS.init();
     }
 
     componentWillUnmount() {
@@ -87,11 +91,19 @@ export default class App extends React.Component {
                           lastestOnBlogPos={this.state.lastestOnBlogPos}
                           contactMePos={this.state.contactMePos}
                       />
-                        <div ref={this.landingRef}> <Landing isLoading={this.state.isLoading}/></div>
-                      <div ref={this.projectsRef}><Projects /></div>
-                      <div ref={this.aboutMeRef}><AboutMe /></div>
-                      <div ref={this.lastestOnBlogRef}><LastestOnBlog /></div>
-                      <div ref={this.contactMeRef}><ContactMe /></div>
+                        <div ref={this.landingRef}>
+                            <Landing isLoading={this.state.isLoading} />
+                        </div>
+                        <div ref={this.projectsRef}>
+                            <Projects /></div>
+                        <div ref={this.aboutMeRef}><AboutMe />
+                        </div>
+                        <div ref={this.lastestOnBlogRef}>
+                            <LastestOnBlog />
+                        </div>
+                        <div ref={this.contactMeRef}>
+                            <ContactMe />
+                        </div>
                         <Footer />
                   </div>
               </div> 
