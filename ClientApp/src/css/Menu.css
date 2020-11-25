@@ -179,6 +179,8 @@ body {
 }
 
 .menu-link-span {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   display: block;
   font-size: 5rem;
   font-weight: 900;

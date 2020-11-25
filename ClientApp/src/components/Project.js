@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import { Link } from "react-router-dom";
 import '../css/Project.css';
 import Arrow from '../svg/arrow.svg';
 
@@ -10,11 +11,12 @@ const Project = () => {
                     <h4>2020</h4>
                     <h3>Browser Game</h3>
                     <div className="row">
-                        <a href="" className="center-all">LIVE<img src={Arrow} ></img>
-                        </a>
+                        <Link to="/SaperLogic" className="center-all">LIVE
+                            <img src={Arrow}></img>
+                        </Link>
                         <span>|</span>
-                        <a href="" className="center-all">CODE<img src={Arrow} ></img>
-                        </a>
+                        <Link to="/sadsdfassdfadsgdf" className="center-all">CODE<img src={Arrow} ></img>
+                        </Link>
                     </div>
                     <div className="project-image">
 

@@ -179,7 +179,7 @@ body {
   }
 }
 @media only screen and (max-width: 770px) {
-  .landing-text > h1 {
+  .landing-text.active > h1 {
     font-size: 4rem;
     margin-top: 0;
     margin-bottom: 15px;
@@ -193,10 +193,10 @@ body {
   .landing-text {
     max-width: 650px;
   }
-  .landing-text > h1 {
+  .landing-text.active > h1 {
     font-size: 3rem;
   }
-  .landing-text:nth-child(1), .landing-text :nth-child(3) {
+  .landing-text.active:nth-child(1), .landing-text.active :nth-child(3) {
     font-size: 1.1rem;
   }
 }
@@ -208,10 +208,10 @@ body {
   .landing-text {
     max-width: 80vw;
   }
-  .landing-text > h1 {
+  .landing-text.active > h1 {
     font-size: 2rem;
   }
-  .landing-text:nth-child(1), .landing-text :nth-child(3) {
+  .landing-text.active:nth-child(1), .landing-text.active :nth-child(3) {
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
   }

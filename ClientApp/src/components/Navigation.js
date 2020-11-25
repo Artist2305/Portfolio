@@ -40,6 +40,7 @@ export default class Navigation extends Component {
         }
     }
     handleClickLinkBtn = (amount) => {
+        console.log('method has been started');
         window.scrollBy(0, amount);
         this.setState({ menuActive: false });
         menuOpen = false;
@@ -64,6 +65,8 @@ export default class Navigation extends Component {
                     aboutMePos={this.props.aboutMePos}
                     lastesOnBlogPos={this.props.lastesOnBlogPos}
                     contactMePos={this.props.contactMePos}
+
+                    handlePosition={this.props.handlePosition}
                 />
                 <Logo isMenuActive={this.state.menuActive} />
             </React.Fragment>

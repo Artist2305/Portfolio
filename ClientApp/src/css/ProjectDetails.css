@@ -1,0 +1,352 @@
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #424242;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-content-right {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.align-content-left {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.center-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-vert {
+  display: flex;
+  justify-content: center;
+}
+
+.center-horz {
+  display: flex;
+  align-items: center;
+}
+
+.left-corner-wrap {
+  position: fixed;
+  width: 330px;
+  height: 60px;
+  top: 0px;
+  left: 0px;
+  right: unset;
+  filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
+  z-index: 25;
+}
+
+.right-corner-wrap {
+  position: fixed;
+  width: 200px;
+  height: 60px;
+  top: 0px;
+  left: unset;
+  right: 0px;
+  filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
+  z-index: 25;
+}
+
+.section-title {
+  margin: 15px 0 0 0;
+  padding: 65px 20px 65px 20px;
+  position: relative;
+  max-width: 1500px;
+  margin: 0;
+  max-height: 50px;
+}
+.section-title > h2 {
+  margin: 0;
+  padding: 0;
+  color: #424242;
+  font-weight: 900;
+  font-size: 2.2rem;
+  max-width: 670px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 540px) {
+  .section-title {
+    margin: 15px 0 0 0;
+    padding: 45px 20px 45px 20px;
+  }
+  .section-title > h2 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .section-title {
+    margin: 15px 0 0 0;
+    padding: 25px 20px 25px 20px;
+  }
+  .section-title > h2 {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .left-corner-wrap {
+    position: fixed;
+    width: 211px;
+    height: 83px;
+    top: 0px;
+    left: 0px;
+    right: unset;
+    filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
+  }
+
+  .right-corner-wrap {
+    position: fixed;
+    width: 103px;
+    height: 170px;
+    top: 0px;
+    left: unset;
+    right: 0px;
+    filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
+  }
+}
+.project-detail-container {
+  margin: 150px 0px 200px 0px;
+  padding: 0;
+}
+
+.details-container {
+  display: grid;
+  grid-template-columns: 400px auto;
+}
+
+.project-details > h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+.project-details > h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.project-details > h6 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.project-details > p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.details-buttons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.details-buttons > div > a {
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #424242;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  font-weight: 700;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+
+.btn-underline {
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  height: 5px;
+  transition: 0.3s;
+  background-color: #424242;
+  width: 0px;
+  border-radius: 5px;
+}
+
+.details-btn {
+  position: relative;
+}
+
+.details-btn:hover {
+  cursor: pointer;
+}
+.details-btn:hover > .btn-underline {
+  width: 100%;
+  left: 0%;
+}
+
+.project-img {
+  height: 740px;
+  width: 100%;
+  background-color: gray;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.project-desc > p {
+  margin-top: 60px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+.testimonial-container > div > h6 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.testimonial-container > div > p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 1000px;
+}
+
+.other-projects {
+  display: grid;
+  grid-template-columns: auto;
+}
+.other-projects > div > h6 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.other-projects > div > a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #424242;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  z-index: 1;
+  letter-spacing: 5px;
+}
+
+.btn-underline {
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  height: 5px;
+  transition: 0.3s;
+  background-color: #424242;
+  width: 0px;
+  border-radius: 5px;
+}
+
+.other-project-link {
+  position: relative;
+}
+
+.other-project-link:hover {
+  cursor: pointer;
+}
+.other-project-link:hover > .btn-underline {
+  width: 100%;
+  left: 0%;
+}
+
+@media only screen and (max-width: 1330px) {
+  .testimonial-container > div > p {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  .details-container {
+    grid-template-columns: auto;
+  }
+
+  .project-desc > p {
+    margin-top: 30px;
+    margin-bottom: 45px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .project-detail-container {
+    margin: 75px 0px 200px 0px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 590px) {
+  .details-buttons {
+    grid-template-columns: auto;
+  }
+  .details-buttons > div > a {
+    padding: 10px 0px 0px 0px;
+    color: #424242;
+    -webkit-text-decoration-line: none;
+            text-decoration-line: none;
+    font-weight: 700;
+    letter-spacing: 5px;
+    z-index: 1;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .project-details > h2 {
+    font-size: 1.1rem;
+  }
+  .project-details > h1 {
+    font-size: 1.3rem;
+  }
+  .project-details > h6 {
+    font-size: 0.9rem;
+  }
+  .project-details > p {
+    font-size: 1rem;
+  }
+
+  .project-desc > p {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-container > div > h6 {
+    font-size: 0.9rem;
+  }
+  .testimonial-container > div > p {
+    font-size: 1rem;
+  }
+
+  .other-projects {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .other-projects > div > h6 {
+    font-size: 0.9rem;
+  }
+  .other-projects > div > a {
+    font-size: 1rem;
+  }
+}

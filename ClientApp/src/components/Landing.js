@@ -9,6 +9,10 @@ export default class Landing extends Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.switchProjectDetailsStatus(false);
+    }
+
     render() {
         return (
             <React.Fragment>

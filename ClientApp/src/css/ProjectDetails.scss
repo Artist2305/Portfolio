@@ -1,0 +1,245 @@
+﻿@import 'Variables';
+@import 'Global';
+
+.project-detail-container {
+    @include marg-pad ((150px 0px 200px 0px),(0));
+}
+
+.details-container {
+    display: grid;
+    grid-template-columns: 400px auto;
+}
+.project-details {
+    & > h2 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+
+    & > h1 {
+        font-size: 1.5rem;
+        font-weight: 900;
+        letter-spacing:2px;
+    }
+
+    & > h6 {
+        font-size: 1.1rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    & > p {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.details-buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    & > div >  a {
+        padding-left: 30px;
+        padding-right: 30px;
+        color: $text-color;
+        text-decoration-line: none;
+        font-weight: 700;
+        letter-spacing: 5px;
+        z-index: 1;
+    }
+}
+
+.btn-underline{
+    position:absolute;
+    top: 27px;
+    left:50%;
+    height: 5px;
+    transition:.3s;
+    background-color: $text-color;
+    width:0px;
+    border-radius:5px;
+}
+.details-btn {
+    position: relative;
+}
+.details-btn:hover {
+    cursor: pointer;
+
+    & > .btn-underline {
+        width: 100%;
+        left:0%;
+    }
+}
+
+
+
+
+
+
+
+.project-img {
+    height: 740px;
+    width: 100%;
+    background-color: gray;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.project-desc {
+    & > p {
+        margin-top: 60px;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: auto;
+    & > div > h6 {
+        font-size: 1.1rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    & > div > p {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        width: 1000px;
+    }
+}
+
+.other-projects {
+    display: grid;
+    grid-template-columns: auto;
+
+    & > div > h6 {
+        font-size: 1.1rem;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    & > div > a {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        color: $text-color;
+        text-decoration-line: none;
+        z-index: 1;
+        letter-spacing: 5px;
+    }
+}
+.btn-underline{
+    position:absolute;
+    top: 27px;
+    left:50%;
+    height: 5px;
+    transition:.3s;
+    background-color: $text-color;
+    width:0px;
+    border-radius: 5px;
+}
+.other-project-link {
+    position: relative;
+}
+.other-project-link:hover {
+    cursor: pointer;
+
+    & > .btn-underline {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+@media only screen and (max-width: 1330px)
+{
+    .testimonial-container {
+        & > div > p {
+            width: 90%;
+        }
+    }
+}
+@media only screen and (max-width: 1040px) {
+    .details-container {
+        grid-template-columns: auto;
+    }
+    .project-desc {
+        & > p {
+            margin-top: 30px;
+            margin-bottom: 45px;
+        }
+    }
+}
+@media only screen and (max-width: 700px) {
+    .project-detail-container {
+        @include marg-pad ((75px 0px 200px 0px),(0));
+    }
+}
+@media only screen and (max-width: 590px){
+    .details-buttons {
+        grid-template-columns: auto ;
+        & > div > a {
+            padding:10px 0px 0px 0px;
+            color: $text-color;
+            text-decoration-line: none;
+            font-weight: 700;
+            letter-spacing: 5px;
+            z-index: 1;
+            text-align: center;
+        }
+    }
+}
+@media only screen and (max-width: 415px) {
+    .project-details {
+        & > h2 {
+            font-size: 1.1rem;
+        }
+
+        & > h1 {
+            font-size: 1.3rem;
+        }
+
+        & > h6 {
+            font-size: 0.9rem;
+        }
+
+        & > p {
+            font-size: 1rem;
+        }
+    }
+    .project-desc {
+        & > p {
+            font-size: 0.9rem;
+        }
+    }
+    .testimonial-container {
+        & > div > h6 {
+            font-size: 0.9rem;
+        }
+        & > div > p {
+            font-size: 1rem;
+        }
+    }
+    .other-projects {
+        display: grid;
+        grid-template-columns: auto;
+        & > div > h6 {
+            font-size: 0.9rem;
+        }
+        & > div > a {
+            font-size: 1rem;
+        }
+    }
+}

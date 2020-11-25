@@ -1,4 +1,5 @@
-﻿import React, { Component, useState, useEffect} from 'react';
+﻿import React, { Component, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Menu.css';
 
 export default class Menu extends Component {   
@@ -7,27 +8,35 @@ export default class Menu extends Component {
             <div className={"menu-wrap col center-all" + (this.props.isMenuActive ? " active" : "")}>
                 <div className={"cover" + (this.props.isMenuActive ? " active" : "")}></div>
                 <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
-                    <a className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
-                        onClick={() => { this.props.handleClickLinkBtn(this.props.landingPos) }}
-                    >HOME</a>
+                    <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
+                        onClick={() => {
+                            this.props.handlePosition(this.props.handleClickLinkBtn, 1);
+                        }}
+                    >HOME</Link>
                     <div className="menu-underline"></div>
                 </div>
                 <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
-                    <a className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
-                        onClick={() => { this.props.handleClickLinkBtn(this.props.projectsPos) }}
-                    >PROJECTS</a>
+                    <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
+                        onClick={() => {
+                            this.props.handlePosition(this.props.handleClickLinkBtn, 2);
+                        }}
+                    >PROJECTS</Link >
                     <div className="menu-underline"></div>
                 </div>
                 <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
-                    <a className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
-                        onClick={() => { this.props.handleClickLinkBtn(this.props.aboutMePos) }}
-                    >ABOUT ME</a>
+                    <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
+                        onClick={() => {
+                            this.props.handlePosition(this.props.handleClickLinkBtn, 3);
+                        }}
+                    >ABOUT ME</Link >
                     <div className="menu-underline"></div>
                 </div>
                 <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
-                    <a className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
-                        onClick={() => { this.props.handleClickLinkBtn(this.props.contactMePos)}}
-                    >CONTACT</a>
+                    <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
+                        onClick={() => {
+                            this.props.handlePosition(this.props.handleClickLinkBtn, 5);
+                        }}
+                    >CONTACT</Link >
                     <div className="menu-underline"></div>
                 </div>
                 <h6 className={"menu-footer" + (this.props.isMenuActive ? " active" : "")}>Created in Wellingborough by Mateusz Szostek with passion</h6>
