@@ -138,6 +138,14 @@ body {
   z-index: 5;
 }
 
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+}
+
 @media only screen and (max-width: 770px) {
   .app-container {
     margin: auto 70px auto 70px;

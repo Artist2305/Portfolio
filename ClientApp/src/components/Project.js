@@ -1,17 +1,20 @@
-﻿import React from 'react';
+﻿import React, { Component} from 'react';
 import { Link } from "react-router-dom";
 import '../css/Project.css';
 import Arrow from '../svg/arrow.svg';
 
-const Project = () => {
-
+export default class Project extends Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
         return (
             <React.Fragment>
                 <div className="project" data-aos="fade-up">
-                    <h4>2020</h4>
-                    <h3>Browser Game</h3>
+                    <h4>{this.props.data.date}</h4>
+                    <h3>{ this.props.data.name}</h3>
                     <div className="row">
-                        <Link to="/SaperLogic" className="center-all">LIVE
+                        <Link to={this.props.data.link} onClick={() => { this.props.switchCoverStatus(true)}}className="center-all">LIVE
                             <img src={Arrow}></img>
                         </Link>
                         <span>|</span>
@@ -24,6 +27,5 @@ const Project = () => {
                 </div>
             </React.Fragment >
         );
+    }
 }
-
-export default Project

@@ -1,0 +1,193 @@
+[
+    {
+        "id": "1",
+        "link":  "/MagicWonder",
+        "name": "Magic Wander",
+        "date": "2020",
+        "technologies": [
+            {
+                "id": "1",
+                "name": "Unity 2D"
+            },
+            {
+                "id": "2",
+                "name": "C#"
+            },
+            {
+                "id": "3",
+                "name": "GIMP"
+            },
+            {
+                "id": "4",
+                "name": "Audacity"
+            }
+        ],
+        "role": [
+            {
+                "id": "1",
+                "name": "Game & Gameplay Designer"
+            },
+            {
+                "id": "2",
+                "name": "Graphic Designer"
+            },
+            {
+                "id": "3",
+                "name": "C# Programmer"
+            }
+        ],
+        "client": "",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+                "id": "1",
+                "name": "picture_link_1"
+            },
+            {
+                "id": "2",
+                "name": "picture_link_2"
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "clientName": ""
+    },
+    {
+        "id": "2",
+        "link": "/SaperLogic",
+        "name": "Saper Logic",
+        "date": "2018",
+        "technologies": [
+            {
+                "id": "1",
+                "name": "Unity 2D"
+            },
+            {
+                "id": "2",
+                "name": "C#"
+            },
+            {
+                "id": "3",
+                "name": "GIMP"
+            },
+            {
+                "id": "4",
+                "name": "Audacity"
+            }
+        ],
+        "role": [
+            {
+                "id": "1",
+                "name": "Game & Gameplay Designer"
+            },
+            {
+                "id": "2",
+                "name": "Graphic Designer"
+            },
+            {
+                "id": "3",
+                "name": "C# Programmer"
+            }
+        ],
+        "client": "",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+                "id": "1",
+                "name": "picture_link_1"
+            },
+            {
+                "id": "2",
+                "name": "picture_link_2"
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem",
+        "clientName": ""
+    },
+    {
+        "id": "3",
+        "link": "/SquarelineTransport",
+        "name": "Squareline Transport - Company Page",
+        "date": "2020",
+        "technologies": [
+            {
+                "id": "1",
+                "name": "HTML, SCSS, JAVASCRIPT"
+            },
+            {
+                "id": "2",
+                "name": "C#"
+            }
+        ],
+        "role": [
+            {
+                "id": "1",
+                "name": "Web Designer"
+            },
+            {
+                "id": "2",
+                "name": "Web Developer"
+            }
+        ],
+        "client": "Squareline Transport",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+                "id": "1",
+                "name": "picture_link_1"
+            },
+            {
+                "id": "2",
+                "name": "picture_link_2"
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem",
+        "clientName": "Andrei Stanica - Director"
+    },
+    {
+        "id": "4",
+        "link": "/CodeArtist",
+        "name": "Code Artist - Programming Blog",
+        "date": "2020",
+        "technologies": [
+            {
+                "id": "1",
+                "name": "HTML, SCSS, JAVASCRIPT"
+            },
+            {
+                "id": "2",
+                "name": "C#"
+            },
+            {
+                "id": "3",
+                "name": "GATSBY"
+            }
+        ],
+        "role": [
+            {
+                "id": "1",
+                "name": "Web Designer"
+            },
+            {
+                "id": "2",
+                "name": "Web Developer"
+            }
+        ],
+        "client": "",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+                "id": "1",
+                "name": "picture_link_1"
+            },
+            {
+                "id": "2",
+                "name": "picture_link_2"
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem",
+        "clientName": ""
+    }
+]
+
+
+

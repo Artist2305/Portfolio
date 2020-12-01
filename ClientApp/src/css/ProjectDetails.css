@@ -197,6 +197,47 @@ body {
   left: 0%;
 }
 
+.det-buttons {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 200px 200px;
+}
+.det-buttons > div > a {
+  padding-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #424242;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  z-index: 1;
+}
+
+.det-btn {
+  position: relative;
+}
+
+.det-btn:hover {
+  cursor: pointer;
+}
+.det-btn:hover > .det-underline {
+  width: 100%;
+  left: 0%;
+}
+
+.det-underline {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  height: 5px;
+  transition: 0.3s;
+  background-color: #424242;
+  width: 0px;
+  border-radius: 5px;
+}
+
 .project-img {
   height: 740px;
   width: 100%;
@@ -348,5 +389,9 @@ body {
   }
   .other-projects > div > a {
     font-size: 1rem;
+  }
+
+  .det-buttons {
+    grid-template-columns: 120px;
   }
 }

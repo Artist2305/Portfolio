@@ -8,11 +8,26 @@
     top: -100%;
     background-color: $text-color;
     transition: .4s;
+    z-index:1000;
 
     &.active {
         top: 0;
     }
 }
+.cover-side{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 0;
+    transition: 0.4s;
+    z-index: 1000;
+
+    &.active-side {
+        left: 0;
+    }
+}
+
 .menu-wrap {
     position: fixed;
     left: 0;
@@ -20,7 +35,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    transition:1s;
+    transition: 1s;
 
     &.active {
         z-index: 20;
@@ -41,6 +56,7 @@
         animation: menu-footer-fade-in .7s ease-out normal;
         animation-fill-mode: forwards;
         animation-delay: .4s;
+        z-index: 1001;
     }
 
     & > .menu-link:nth-child(2) > .menu-link-span {
@@ -58,6 +74,10 @@
     & > .menu-link:nth-child(5) > .menu-link-span {
         animation-delay: .3s;
     }
+
+    & > .menu-link:nth-child(6) > .menu-link-span {
+        animation-delay: .4s;
+    }
 }
 
 .menu-link-span {
@@ -70,9 +90,10 @@
     opacity: 0;
     transition: 0.3s;
 
-    &.active{
+    &.active {
         animation: link-fade-in .7s ease-out normal;
         animation-fill-mode: forwards;
+        z-index: 1001;
     }
 }
 
@@ -83,14 +104,16 @@
     &.active {
         transition: 0.3s;
         display: block;
+        z-index: 1001;
     }
-
 }
 
 .menu-link:hover {
     cursor: pointer;
-    & > .menu-underline{
-        width:100%;
+
+    & > .menu-underline {
+        width: 100%;
+        z-index: 1001;
     }
 }
 

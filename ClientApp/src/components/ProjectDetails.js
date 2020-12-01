@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
 import '../css/ProjectDetails.css';
+import {motion } from 'framer-motion'
 
 export default class ProjectDetails extends Component {
 
@@ -8,33 +9,50 @@ export default class ProjectDetails extends Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0,0);
         this.props.switchProjectDetailsStatus(true);
+        this.props.switchCoverStatus(false);
+    }
+
+    pageTransition = {
+        in: {
+            x: ["-120vw", "-10vw", "0vw"],
+            opacity: [0, 0, 1],
+            times: [0, 0.5, 1],
+            duration: 0.6,
+            ease: "ease",
+        },
+        out: {
+            x: ["0vw", "-10vw", "-120vw"],
+            opacity: [1, 0, 0],
+            times: [0, 0.5, 1],
+            duration: 0.6,
+            ease: "ease",
+        },
     }
 
     render() {
+        const roles = this.props.projectData.role.map(s => <p key={s.id}>{s.name}</p>);
+        const technologies = this.props.projectData.technologies.map(s => <p key={s.id}>{s.name}</p>);
         return (
-            <React.Fragment >
+            <motion.div initial="out" animate="in" exit="out" variants={this.pageTransition}>
                 <div className="project-detail-container">
                     <div className="details-container">
                         <div className="project-details">
-                            <h2>2020</h2>
-                            <h1>PROJECT NAME</h1>
+                            <h2>{this.props.projectData.date}</h2>
+                            <h1>{this.props.projectData.name}</h1>
                             <h6>MY ROLE</h6>
-                            <p>ROLE 1</p>
-                            <p>ROLE 2</p>
-                            <p>ROLE 3</p>
+                            {roles}
                             <h6>TECHNOLOGIES</h6>
-                            <p>TECHNOLOGY 1</p>
-                            <p>TECHNOLOGY 2</p>
-                            <p>TECHNOLOGY 3</p>
-                            <p>TECHNOLOGY 4</p>
-                            <p>TECHNOLOGY 5</p>
-                            <h6>CLIENT</h6>
-                            <p>CLIENT NAME</p>
+                            {technologies}
+                            {this.props.projectData.client == "" ? <h6></h6> :
+                                <React.Fragment>
+                                    <h6>CLIENT</h6>
+                                    <p>{this.props.projectData.client}</p>
+                                </React.Fragment>}
                         </div>
                         <div className="project-desc">
-                            <p>Project description Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. Maecenas semper luctus urna. Praesent dolor sem, consectetur id vulputate at, iaculis et nisi. Nullam dapibus elementum felis vel hendrerit. Ut vulputate rhoncus turpis a molestie.
-Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. Maecenas semper luctus urna. Praesent dolor sem, consectetur id vulputate at, iaculis et nisi. Nullam dapibus elementum felis vel hendrerit. Ut vulputate rhoncus turpis a molestie.  </p>
+                            <p>{this.props.projectData.description} </p>
                         </div>
                     </div>
                     <div className="details-buttons center-all">
@@ -67,8 +85,9 @@ Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. M
                             <h6>CLIENT TESTIMONIAL</h6>
                         </div>
                         <div className="center-all">
-                            <p>“Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. Maecenas semper luctus urna. Praesent dolor sem, consectetur id vulputate at, iaculis et nisi. Nullam dapibus elementum felis vel hendrerit. Ut vulputate rhoncus turpis a molestie. Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. Maecenas semper luctus urna. Praesent dolor sem, consectetur id vulputate at, iaculis et nisi. Nullam dapibus elementum felis vel hendrerit. Ut vulputate rhoncus turpis a molestie. “</p>
+                            <p>“{this.props.projectData.testimonial}“</p>
                         </div>
+
                     </div>
                     <div className="other-projects center-all">
                         <div className="center-all other-project-link">
@@ -91,8 +110,18 @@ Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. M
                             <div className="btn-underline"></div>
                         </div>
                     </div>
+                    <div className="det-buttons center-all">
+                        <div className="det-btn center-all">
+                            <a href="">BACK</a>
+                            <div className="det-underline"></div>
+                        </div>
+                        <div className="det-btn center-all">
+                            <a href="">NEXT</a>
+                            <div className="det-underline"></div>
+                        </div>
+                    </div>
                 </div>
-            </React.Fragment >
+            </motion.div >
         )
     }
 

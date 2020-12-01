@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 import '../css/Menu.css';
 
 export default class Menu extends Component {   
+
     render() {
         return (
             <div className={"menu-wrap col center-all" + (this.props.isMenuActive ? " active" : "")}>
                 <div className={"cover" + (this.props.isMenuActive ? " active" : "")}></div>
+                <div className={"cover-side" + (this.props.isCoverActive ? " active-side" : "")}></div>
                 <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
                     <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
                         onClick={() => {
-                            this.props.handlePosition(this.props.handleClickLinkBtn, 1);
+                            this.props.handleClickLinkBtn(this.props.landingRef);
+                            this.props.switchCoverStatus(false);
                         }}
                     >HOME</Link>
                     <div className="menu-underline"></div>
@@ -18,7 +21,8 @@ export default class Menu extends Component {
                 <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
                     <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
                         onClick={() => {
-                            this.props.handlePosition(this.props.handleClickLinkBtn, 2);
+                            this.props.handleClickLinkBtn(this.props.projectsRef);
+                            this.props.switchCoverStatus(false);
                         }}
                     >PROJECTS</Link >
                     <div className="menu-underline"></div>
@@ -26,7 +30,8 @@ export default class Menu extends Component {
                 <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
                     <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
                         onClick={() => {
-                            this.props.handlePosition(this.props.handleClickLinkBtn, 3);
+                            this.props.handleClickLinkBtn(this.props.aboutMeRef);
+                            this.props.switchCoverStatus(false);
                         }}
                     >ABOUT ME</Link >
                     <div className="menu-underline"></div>
@@ -34,7 +39,8 @@ export default class Menu extends Component {
                 <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
                     <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
                         onClick={() => {
-                            this.props.handlePosition(this.props.handleClickLinkBtn, 5);
+                            this.props.handleClickLinkBtn(this.props.contactMeRef);
+                            this.props.switchCoverStatus(false);
                         }}
                     >CONTACT</Link >
                     <div className="menu-underline"></div>

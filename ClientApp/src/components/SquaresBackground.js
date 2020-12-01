@@ -75,7 +75,6 @@ const SquaresBackground = (props) => {
 
     const [squareData] = useSquareData();
     const [modifier] = useModifier();
-    console.log(props)
 
     const squares = squareData.map(s => <Square key={s.id} item={s} modifier={modifier} isLoading={props.isLoading}/>);
 

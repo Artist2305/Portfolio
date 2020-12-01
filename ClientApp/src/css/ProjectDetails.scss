@@ -77,6 +77,48 @@
 
 
 
+.det-buttons {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 200px 200px;
+
+    & > div > a {
+        padding-top:20px;
+        padding-left: 25px;
+        padding-right: 25px;
+        color: $text-color;
+        text-decoration-line: none;
+        font-size:2rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+        z-index: 1;
+    }
+}
+.det-btn{
+    position: relative;
+}
+.det-btn:hover {
+    cursor: pointer;
+
+    & > .det-underline {
+        width: 100%;
+        left: 0%;
+    }
+}
+.det-underline {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    height: 5px;
+    transition: .3s;
+    background-color: $text-color;
+    width: 0px;
+    border-radius: 5px;
+}
+
+
+
+
 
 
 
@@ -241,5 +283,8 @@
         & > div > a {
             font-size: 1rem;
         }
+    }
+    .det-buttons {
+        grid-template-columns: 120px;
     }
 }

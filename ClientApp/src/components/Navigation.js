@@ -39,11 +39,12 @@ export default class Navigation extends Component {
             menuHover = false;
         }
     }
-    handleClickLinkBtn = (amount) => {
-        console.log('method has been started');
-        window.scrollBy(0, amount);
+    handleClickLinkBtn = (ref) => {
+        //console.log(ref);
         this.setState({ menuActive: false });
         menuOpen = false;
+        this.props.choseRef(ref);
+        this.props.switchLinkStatus(true);
     }
  
         render() {
@@ -60,11 +61,13 @@ export default class Navigation extends Component {
                 <Menu
                     isMenuActive={this.state.menuActive}
                     handleClickLinkBtn={this.handleClickLinkBtn}
-                    landingPos={this.props.landingPos}
-                    projectsPos={this.props.projectsPos}
-                    aboutMePos={this.props.aboutMePos}
-                    lastesOnBlogPos={this.props.lastesOnBlogPos}
-                    contactMePos={this.props.contactMePos}
+                    landingRef={this.props.landingRef}
+                    projectsRef={this.props.projectsRef}
+                    aboutMeRef={this.props.aboutMeRef}
+                    lastesOnBlogRef={this.props.lastesOnBlogRef}
+                    contactMeRef={this.props.contactMeRef}
+                    isCoverActive={this.props.isCoverActive}
+                    switchCoverStatus={this.props.switchCoverStatus}
 
                     handlePosition={this.props.handlePosition}
                 />
