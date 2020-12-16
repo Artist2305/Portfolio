@@ -10,6 +10,10 @@ body {
   color: #424242;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -176,7 +180,7 @@ body {
 
 .btn-underline {
   position: absolute;
-  top: 27px;
+  top: 40px;
   left: 50%;
   height: 5px;
   transition: 0.3s;
@@ -229,7 +233,7 @@ body {
 
 .det-underline {
   position: absolute;
-  top: 55px;
+  top: 60px;
   left: 50%;
   height: 5px;
   transition: 0.3s;
@@ -239,11 +243,22 @@ body {
 }
 
 .project-img {
-  height: 740px;
+  position: relative;
   width: 100%;
-  background-color: gray;
   margin-top: 50px;
   margin-bottom: 50px;
+  padding-top: 56.21%;
+}
+.project-img > span {
+  position: absolute;
+  top: 0;
+}
+.project-img > span > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
 }
 
 .project-desc > p {
@@ -273,6 +288,7 @@ body {
 }
 
 .other-projects {
+  margin-top: 30px;
   display: grid;
   grid-template-columns: auto;
 }
@@ -286,7 +302,7 @@ body {
 .other-projects > div > a {
   font-size: 1.2rem;
   font-weight: 700;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
   text-align: center;
   color: #424242;
@@ -298,7 +314,7 @@ body {
 
 .btn-underline {
   position: absolute;
-  top: 27px;
+  top: 35px;
   left: 50%;
   height: 5px;
   transition: 0.3s;
@@ -320,6 +336,11 @@ body {
 }
 
 @media only screen and (max-width: 1330px) {
+  .project-img {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
   .testimonial-container > div > p {
     width: 90%;
   }
@@ -327,6 +348,11 @@ body {
 @media only screen and (max-width: 1040px) {
   .details-container {
     grid-template-columns: auto;
+  }
+
+  .project-img {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .project-desc > p {
@@ -338,6 +364,11 @@ body {
   .project-detail-container {
     margin: 75px 0px 200px 0px;
     padding: 0;
+  }
+
+  .project-img {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (max-width: 590px) {
@@ -356,6 +387,11 @@ body {
   }
 }
 @media only screen and (max-width: 415px) {
+  .project-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   .project-details > h2 {
     font-size: 1.1rem;
   }

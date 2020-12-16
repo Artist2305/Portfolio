@@ -1,72 +1,50 @@
-﻿import React, { Component, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+﻿import React, { Component } from 'react';
 import '../css/Menu.css';
+import MenuLink from './MenuLink';
 
 export default class Menu extends Component {   
-
+    constructor(props) {
+        super(props)
+    }
     render() {
+        const refs = [
+            {
+                id: 1,
+                refer: this.props.landingRef,
+                name: "HOME"
+            },
+            {
+                id: 2,
+                refer: this.props.projectsRef,
+                name: "PROJECTS"
+            },
+            {
+                id: 3,
+                refer: this.props.aboutMeRef,
+                name: "ABOUT ME"
+            },
+            {
+                id: 4,
+                refer: this.props.contactMeRef,
+                name: "CONTACT"
+            }
+        ]
+
+        const links = refs.map(s => <MenuLink
+            key={s.id}
+            isMenuActive={this.props.isMenuActive}
+            handleClickLinkBtn={this.props.handleClickLinkBtn}
+            switchCoverStatus={this.props.switchCoverStatus}
+            refer={s.refer}
+            name={s.name}
+        >
+        </MenuLink>);
         return (
             <div className={"menu-wrap col center-all" + (this.props.isMenuActive ? " active" : "")}>
                 <div className={"cover" + (this.props.isMenuActive ? " active" : "")}></div>
                 <div className={"cover-side" + (this.props.isCoverActive ? " active-side" : "")}></div>
-                <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
-                    <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
-                        onClick={() => {
-                            this.props.handleClickLinkBtn(this.props.landingRef);
-                            this.props.switchCoverStatus(false);
-                        }}
-                    >HOME</Link>
-                    <div className="menu-underline"></div>
-                </div>
-                <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
-                    <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
-                        onClick={() => {
-                            this.props.handleClickLinkBtn(this.props.projectsRef);
-                            this.props.switchCoverStatus(false);
-                        }}
-                    >PROJECTS</Link >
-                    <div className="menu-underline"></div>
-                </div>
-                <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
-                    <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
-                        onClick={() => {
-                            this.props.handleClickLinkBtn(this.props.aboutMeRef);
-                            this.props.switchCoverStatus(false);
-                        }}
-                    >ABOUT ME</Link >
-                    <div className="menu-underline"></div>
-                </div>
-                <div className={"menu-link" + (this.props.isMenuActive ? " active" : "")}>
-                    <Link to="/" className={"menu-link-span" + (this.props.isMenuActive ? " active" : "")}
-                        onClick={() => {
-                            this.props.handleClickLinkBtn(this.props.contactMeRef);
-                            this.props.switchCoverStatus(false);
-                        }}
-                    >CONTACT</Link >
-                    <div className="menu-underline"></div>
-                </div>
+                    {links}
                 <h6 className={"menu-footer" + (this.props.isMenuActive ? " active" : "")}>Created in Wellingborough by Mateusz Szostek with passion</h6>
-
-                {/* 
-                 <div className="cover"></div>
-                <div className="menu-link">
-                    <a className="menu-link-span" onClick={() => this.handleClickLinkBtn(position[0])}>HOME</a>
-                    <div className="menu-underline"></div>
-                </div>
-                <div className="menu-link">
-                    <a className="menu-link-span" onClick={() => this.handleClickLinkBtn(position[1])}>PROJECTS</a>
-                    <div className="menu-underline"></div>
-                </div>
-                <div className="menu-link">
-                    <a className="menu-link-span" onClick={() => this.handleClickLinkBtn(position[2])}>ABOUT ME</a>
-                    <div className="menu-underline"></div>
-                </div>
-                <div className="menu-link">
-                    <a className="menu-link-span" onClick={() => this.handleClickLinkBtn(position[3])}>CONTACT</a>
-                    <div className="menu-underline"></div>
-                </div>
-                <h6 className="menu-footer">Created in Wellingborough by Mateusz Szostek with passion</h6>
-                 */}
             </div>
         );
     }

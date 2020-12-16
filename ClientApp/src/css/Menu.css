@@ -10,6 +10,10 @@ body {
   color: #424242;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -160,6 +164,7 @@ body {
   height: 100%;
   z-index: 0;
   transition: 1s;
+  min-height: 650px;
 }
 .menu-wrap.active {
   z-index: 20;
@@ -167,9 +172,9 @@ body {
 .menu-wrap > h6 {
   opacity: 0;
   display: none;
-  position: fixed;
+  position: absolute;
   bottom: 5px;
-  color: #ECE8DC;
+  color: #f6f4ef;
   z-index: 30;
   font-size: 1rem;
 }
@@ -203,7 +208,7 @@ body {
   font-size: 5rem;
   font-weight: 900;
   margin: 5px;
-  color: #ECE8DC;
+  color: #f6f4ef;
   opacity: 0;
   transition: 0.3s;
 }
@@ -237,7 +242,7 @@ body {
   position: absolute;
   height: 15px;
   width: 0px;
-  background-color: #ECE8DC;
+  background-color: #f6f4ef;
   transition: 0.4s;
 }
 
@@ -278,6 +283,9 @@ body {
     height: 7px;
   }
 
+  .menu-wrap {
+    min-height: 475px;
+  }
   .menu-wrap > h6 {
     font-size: 0.8rem;
   }

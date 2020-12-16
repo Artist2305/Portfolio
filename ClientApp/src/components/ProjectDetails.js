@@ -1,17 +1,58 @@
 ﻿import React, { Component } from 'react';
 import '../css/ProjectDetails.css';
-import {motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default class ProjectDetails extends Component {
-
     constructor(props) {
         super(props)
+        this.state = ({
+            links: [],
+            backNext: ["",""]
+        })
     }
-
     componentDidMount() {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
+        var links = this.generateLinks(this.props.links);
+        var backNext = this.generateNextAndPrevious(this.props.links);
         this.props.switchProjectDetailsStatus(true);
         this.props.switchCoverStatus(false);
+        this.setState({
+            links: links
+        })
+        this.setState({
+            backNext: backNext
+        })
+    }
+
+    generateLinks = (links) => {
+        let arr = [...links];
+        let l = arr.lenght;
+        arr.splice((this.props.projectData.id - 1), 1);
+        return arr;
+    }
+    generateNextAndPrevious = (linksData) => {
+        let linkNext;
+        let linkBack;
+
+        let current = parseInt(this.props.projectData.id) - 1;
+
+        if (current == 0) {
+            linkBack = linksData[linksData.length - 1];
+            linkNext = linksData[current + 1];
+        }
+        else if (current == linksData.length - 1) {
+            linkNext = linksData[0];
+            linkBack = linksData[current - 1];
+        }
+        else {
+            linkNext = linksData[current + 1];
+            linkBack = linksData[current - 1]
+        }
+
+        return [linkBack, linkNext];
     }
 
     pageTransition = {
@@ -30,10 +71,21 @@ export default class ProjectDetails extends Component {
             ease: "ease",
         },
     }
-
     render() {
-        const roles = this.props.projectData.role.map(s => <p key={s.id}>{s.name}</p>);
+        const roles = this.props.projectData.roles.map(s => <p key={s.id}>{s.name}</p>);
         const technologies = this.props.projectData.technologies.map(s => <p key={s.id}>{s.name}</p>);
+        const otherProjects = this.state.links.map(s =>
+            <div className="center-all other-project-link">
+                <Link to={s} onClick={() => { this.props.switchCoverStatus(true) }} className="center-all">{s.substring(1)}</Link>
+                <div className="btn-underline"></div>
+            </div>)
+        const screens = this.props.screens.map(s => <div key={s.id} className="project-img">
+            <LazyLoadImage
+                src={s.image}
+                effect="blur"
+                width="100%"
+                afterLoad={ () => console.log("zaladowane")} />
+        </div>);
         return (
             <motion.div initial="out" animate="in" exit="out" variants={this.pageTransition}>
                 <div className="project-detail-container">
@@ -70,15 +122,7 @@ export default class ProjectDetails extends Component {
                         </div>
                     </div>
                     <div className="pictures-container">
-                        <div className="project-img">
-                            <img src=""></img>
-                        </div>
-                        <div className="project-img">
-                            <img src=""></img>
-                        </div>
-                        <div className="project-img">
-                            <img src=""></img>
-                        </div>
+                        {screens}
                     </div>
                     <div className="testimonial-container center-all">
                         <div className="center-all">
@@ -87,36 +131,17 @@ export default class ProjectDetails extends Component {
                         <div className="center-all">
                             <p>“{this.props.projectData.testimonial}“</p>
                         </div>
-
                     </div>
                     <div className="other-projects center-all">
-                        <div className="center-all other-project-link">
-                            <h6 href="">SEE ALSO</h6>
-                        </div>
-                        <div className="center-all other-project-link">
-                            <a href="">PROJECT 1</a>
-                            <div className="btn-underline"></div>
-                        </div>
-                        <div className="center-all other-project-link">
-                            <a href="">PROJECT 1</a>
-                            <div className="btn-underline"></div>
-                        </div>
-                        <div className="center-all other-project-link">
-                            <a href="">PROJECT 1</a>
-                            <div className="btn-underline"></div>
-                        </div>
-                        <div className="center-all other-project-link">
-                            <a href="">PROJECT 1</a>
-                            <div className="btn-underline"></div>
-                        </div>
+                        {otherProjects}
                     </div>
                     <div className="det-buttons center-all">
                         <div className="det-btn center-all">
-                            <a href="">BACK</a>
+                            <Link to={this.state.backNext[0]} onClick={() => { this.props.switchCoverStatus(true) }} className="center-all">BACK</Link>
                             <div className="det-underline"></div>
                         </div>
                         <div className="det-btn center-all">
-                            <a href="">NEXT</a>
+                            <Link to={this.state.backNext[1]} onClick={() => { this.props.switchCoverStatus(true) }} className="center-all">NEXT</Link>
                             <div className="det-underline"></div>
                         </div>
                     </div>

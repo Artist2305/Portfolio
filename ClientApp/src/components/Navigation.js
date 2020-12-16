@@ -1,5 +1,4 @@
-﻿import React, {Component, useState, useEffect } from 'react';
-//import '../css/Navigation.css';
+﻿import React, {Component} from 'react';
 import NavButton from './NavButton';
 import Menu from './Menu';
 import Logo from './Logo';
@@ -8,7 +7,6 @@ let menuHover = false;
 let menuOpen = false;
 
 export default class Navigation extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -40,7 +38,6 @@ export default class Navigation extends Component {
         }
     }
     handleClickLinkBtn = (ref) => {
-        //console.log(ref);
         this.setState({ menuActive: false });
         menuOpen = false;
         this.props.choseRef(ref);
@@ -48,7 +45,6 @@ export default class Navigation extends Component {
     }
  
         render() {
-       // const [position] = useSectionPosition();
         return (
             <React.Fragment>
                 <NavButton

@@ -9,63 +9,63 @@ import Footer from './components/Footer';
 import './css/App.css';
 import Navigation from './components/Navigation';
 import AppCover from './components/AppCover';
-import ProjectDetails from './components/ProjectDetails';
-
-import projectsData from './json/projectsData.json';
-import ProjectWrapper from './components/ProjectWrapper';
+//import projectsData from './json/projectsData.json';
 import AOS from "aos";
 import 'aos/dist/aos.css'
 
 import { Route, Switch } from "react-router-dom";
 
 import { AnimatePresence, motion } from 'framer-motion'
-
+import ProjectDetails from './components/ProjectDetails';
+import MagicWanderScreens from './img/magicWanderImages.js';
+import SaperLogicScreens from './img/saperLogicImages.js';
 
 export default class AppContainer extends React.Component {
 
     constructor(props) {
         super(props)
-
         this.landingRef = React.createRef();
         this.projectsRef = React.createRef();
         this.aboutMeRef = React.createRef();
         this.lastestOnBlogRef = React.createRef();
         this.contactMeRef = React.createRef();
-
         this.state = {
-          //  landingPos: undefined,
-         //   projectsPos: undefined,
-         //   aboutMePos: undefined,
-         //   lastestOnBlogPos: undefined,
-          //  contactMePos: undefined,
-
             landingRef: undefined,
             projectsRef: undefined,
             aboutMeRef: undefined,
             lastestOnBlogRef: undefined,
             contactMeRef: undefined,
-
             chosedRef: undefined,
-
             isLoading: true,
             isProjectActive: false,
             isCoverActive: false,
-            isLinkClicked: false
+            isLinkClicked: false,
+            projectsData: []
         }
-
     }
 
-    ismounted = false;
+    projectScreens = [
+        MagicWanderScreens,
+        SaperLogicScreens,
+        MagicWanderScreens,
+        MagicWanderScreens,
+        MagicWanderScreens,
+        MagicWanderScreens
+    ]
 
     componentDidMount() {
+        fetch('api/projects')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    projectsData: data
+            })
+        })
+
         this.initializePositions();
         this.loading();
         AOS.init();
     }
-
-    handlePosition = (refPos) => {
-        
-    };
     scrollTo = (amount) => {
         console.log(amount);
         window.scrollBy(0, amount);
@@ -78,12 +78,9 @@ export default class AppContainer extends React.Component {
             this.switchLinkStatus(false);
         }
     }
-
     initializePositions = () => {
-        console.log("INICJALIZUJE");
         this.setState({ chosedRef: this.landingRef }, () => { console.log(this.state.chosedRef); });
     }
-
     loading = () => {
         setTimeout(() => {
             this.setState({
@@ -91,7 +88,6 @@ export default class AppContainer extends React.Component {
             });
         }, 1000);
     }
-
     choseRef = (ref) => {
         this.setState({ chosedRef: ref }, () => { console.log(this.state.chosedRef) });
     }
@@ -110,10 +106,7 @@ export default class AppContainer extends React.Component {
             isLinkClicked: status
         });
     }
-
     static displayName = AppContainer.name;
-
-
     pageTransition = {
         in: {
             x: ["-120vw", "-10vw", "0vw"],
@@ -132,6 +125,18 @@ export default class AppContainer extends React.Component {
         }
 
     render() {
+
+        const links = this.state.projectsData.map(s => s.link);
+
+        const projectsRoutes = this.state.projectsData.map(s => (
+            <Route key={s.id} path={s.link}>
+                <ProjectDetails switchProjectDetailsStatus={this.switchProjectDetailsStatus}
+                    projectData={s}
+                    switchCoverStatus={this.switchCoverStatus}
+                    links={links}
+                    screens={this.projectScreens[s.id - 1]}
+                />
+            //</Route>));
         return (
             <React.Fragment>
                 <LogoBackground />
@@ -145,16 +150,13 @@ export default class AppContainer extends React.Component {
                             lastestOnBlogRef={this.lastestOnBlogRef}
                             contactMeRef={this.contactMeRef}
                             handlePosition={this.handlePosition}
-
                             choseRef={this.choseRef}
                             isCoverActive={this.state.isCoverActive}
                             switchCoverStatus={this.switchCoverStatus}
                             switchLinkStatus={this.switchLinkStatus}
-
                         />
                         <AnimatePresence exitBeforeEnter>
                             <Switch location={this.props.location} key={this.props.location.pathname} >
-
                                 <Route exact path="/">
                                     <motion.div initial="in" animate="in" exit="out" variants={this.pageTransition}>
                                         <div ref={this.landingRef}>
@@ -166,7 +168,7 @@ export default class AppContainer extends React.Component {
                                         </div>
                                         <div ref={this.projectsRef}>
                                             <Projects
-                                                projectsData={projectsData}
+                                                projectsData={this.state.projectsData}
                                                 switchCoverStatus={this.switchCoverStatus}
                                             />
                                         </div>
@@ -181,30 +183,7 @@ export default class AppContainer extends React.Component {
                                         </div>
                                     </motion.div>
                                 </Route>
-                                <Route path={projectsData[0].link}>
-
-
-                                    <ProjectWrapper switchProjectDetailsStatus={this.switchProjectDetailsStatus}
-                                        projectData={projectsData[0]}
-                                        switchCoverStatus={this.switchCoverStatus} />
-
-
-                                </Route>
-                                <Route path={projectsData[1].link}>
-                                    <ProjectWrapper switchProjectDetailsStatus={this.switchProjectDetailsStatus}
-                                        projectData={projectsData[1]}
-                                        switchCoverStatus={this.switchCoverStatus} />
-                                </Route>
-                                <Route path={projectsData[2].link}>
-                                    <ProjectWrapper switchProjectDetailsStatus={this.switchProjectDetailsStatus}
-                                        projectData={projectsData[2]}
-                                        switchCoverStatus={this.switchCoverStatus} />
-                                </Route>
-                                <Route path={projectsData[3].link}>
-                                    <ProjectWrapper switchProjectDetailsStatus={this.switchProjectDetailsStatus}
-                                        projectData={projectsData[3]}
-                                        switchCoverStatus={this.switchCoverStatus} />
-                                </Route>
+                                {projectsRoutes}
                             </Switch>
                         </AnimatePresence>
                         <Footer />

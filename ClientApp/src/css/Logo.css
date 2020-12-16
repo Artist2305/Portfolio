@@ -10,6 +10,10 @@ body {
   color: #424242;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -141,7 +145,7 @@ body {
   transition: 0.4s;
 }
 .name.active {
-  color: #ECE8DC;
+  color: #f6f4ef;
 }
 
 .proffesion {
@@ -152,11 +156,11 @@ body {
   font-weight: normal;
   font-size: 11px;
   line-height: 13px;
-  letter-spacing: 3px;
+  letter-spacing: 7.8px;
   transition: 0.4s;
 }
 .proffesion.active {
-  color: #ECE8DC;
+  color: #f6f4ef;
 }
 
 @media only screen and (max-width: 700px) {

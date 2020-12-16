@@ -10,6 +10,10 @@ body {
   color: #424242;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -174,7 +178,7 @@ body {
   filter: brightness(80%);
 }
 .menu-button.open > div:nth-child(1) {
-  background-color: #ECE8DC;
+  background-color: #f6f4ef;
   transform: rotate(45deg) translateY(14.5px) translateX(7px);
 }
 .menu-button.open > div:nth-child(2) {
@@ -182,7 +186,7 @@ body {
   transform: translateX(-50px);
 }
 .menu-button.open > div:nth-child(3) {
-  background-color: #ECE8DC;
+  background-color: #f6f4ef;
   transform: rotate(-45deg) translateY(-14.5px) translateX(7px);
 }
 

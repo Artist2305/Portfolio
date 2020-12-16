@@ -10,6 +10,10 @@ body {
   color: #424242;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -134,7 +138,7 @@ body {
   height: 100%;
   background-color: #424242;
   z-index: 40;
-  color: #ECE8DC;
+  color: #f6f4ef;
 }
 .app-cover-container > div > div:nth-child(1) {
   animation: hello-fade-in 0.5s ease-out normal;

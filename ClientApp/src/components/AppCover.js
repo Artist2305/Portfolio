@@ -1,13 +1,8 @@
-﻿import React, { Component} from 'react';
+﻿import { Component} from 'react';
 import '../css/AppCover.css';
 import LogoImg from '../svg/logo.svg';
 
 export default class AppCover extends Component {
-    constructor(props) {
-        super(props)
-
-  
-    }
     render() {
         return (
             <div className={"app-cover-container center-all col" + (this.props.isLoading ? "" : " disable")} >

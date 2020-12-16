@@ -2,8 +2,6 @@
 import '../css/Square.css';
 
 const Square = (props) => {
-
-
     return (
         <div className={"square-move" + (props.isLoading ? "" : " active")}>
             <div className={"square-rotate" + (props.isLoading ? "" : " active")} style={

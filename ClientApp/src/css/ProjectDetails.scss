@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 400px auto;
 }
+
 .project-details {
     & > h2 {
         font-size: 1.3rem;
@@ -19,7 +20,7 @@
     & > h1 {
         font-size: 1.5rem;
         font-weight: 900;
-        letter-spacing:2px;
+        letter-spacing: 2px;
     }
 
     & > h6 {
@@ -41,7 +42,8 @@
 .details-buttons {
     display: grid;
     grid-template-columns: auto auto auto;
-    & > div >  a {
+
+    & > div > a {
         padding-left: 30px;
         padding-right: 30px;
         color: $text-color;
@@ -52,25 +54,27 @@
     }
 }
 
-.btn-underline{
-    position:absolute;
-    top: 27px;
-    left:50%;
+.btn-underline {
+    position: absolute;
+    top: 40px;
+    left: 50%;
     height: 5px;
-    transition:.3s;
+    transition: .3s;
     background-color: $text-color;
-    width:0px;
-    border-radius:5px;
+    width: 0px;
+    border-radius: 5px;
 }
+
 .details-btn {
     position: relative;
 }
+
 .details-btn:hover {
     cursor: pointer;
 
     & > .btn-underline {
         width: 100%;
-        left:0%;
+        left: 0%;
     }
 }
 
@@ -83,20 +87,22 @@
     grid-template-columns: 200px 200px;
 
     & > div > a {
-        padding-top:20px;
+        padding-top: 20px;
         padding-left: 25px;
         padding-right: 25px;
         color: $text-color;
         text-decoration-line: none;
-        font-size:2rem;
+        font-size: 2rem;
         font-weight: 700;
         letter-spacing: 5px;
         z-index: 1;
     }
 }
-.det-btn{
+
+.det-btn {
     position: relative;
 }
+
 .det-btn:hover {
     cursor: pointer;
 
@@ -105,9 +111,10 @@
         left: 0%;
     }
 }
+
 .det-underline {
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 50%;
     height: 5px;
     transition: .3s;
@@ -117,17 +124,25 @@
 }
 
 
-
-
-
-
-
 .project-img {
-    height: 740px;
+    position: relative;
     width: 100%;
-    background-color: gray;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-top: 56.21%;
+
+    & > span {
+        position: absolute;
+        top: 0;
+    }
+
+    & > span > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
+    }
 }
 
 .project-desc {
@@ -141,6 +156,7 @@
 .testimonial-container {
     display: grid;
     grid-template-columns: auto;
+
     & > div > h6 {
         font-size: 1.1rem;
         font-weight: normal;
@@ -160,6 +176,7 @@
 }
 
 .other-projects {
+    margin-top:30px;
     display: grid;
     grid-template-columns: auto;
 
@@ -174,7 +191,7 @@
     & > div > a {
         font-size: 1.2rem;
         font-weight: 700;
-        margin-top: 5px;
+        margin-top: 10px;
         margin-bottom: 5px;
         text-align: center;
         color: $text-color;
@@ -183,19 +200,22 @@
         letter-spacing: 5px;
     }
 }
-.btn-underline{
-    position:absolute;
-    top: 27px;
-    left:50%;
+
+.btn-underline {
+    position: absolute;
+    top: 35px;
+    left: 50%;
     height: 5px;
-    transition:.3s;
+    transition: .3s;
     background-color: $text-color;
-    width:0px;
+    width: 0px;
     border-radius: 5px;
 }
+
 .other-project-link {
     position: relative;
 }
+
 .other-project-link:hover {
     cursor: pointer;
 
@@ -205,17 +225,26 @@
     }
 }
 
-@media only screen and (max-width: 1330px)
-{
+@media only screen and (max-width: 1330px) {
+    .project-img {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
     .testimonial-container {
         & > div > p {
             width: 90%;
         }
     }
 }
+
 @media only screen and (max-width: 1040px) {
     .details-container {
         grid-template-columns: auto;
+    }
+    .project-img {
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
     .project-desc {
         & > p {
@@ -224,16 +253,23 @@
         }
     }
 }
+
 @media only screen and (max-width: 700px) {
     .project-detail-container {
         @include marg-pad ((75px 0px 200px 0px),(0));
     }
+    .project-img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
-@media only screen and (max-width: 590px){
+
+@media only screen and (max-width: 590px) {
     .details-buttons {
-        grid-template-columns: auto ;
+        grid-template-columns: auto;
+
         & > div > a {
-            padding:10px 0px 0px 0px;
+            padding: 10px 0px 0px 0px;
             color: $text-color;
             text-decoration-line: none;
             font-weight: 700;
@@ -243,7 +279,12 @@
         }
     }
 }
+
 @media only screen and (max-width: 415px) {
+    .project-img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     .project-details {
         & > h2 {
             font-size: 1.1rem;
@@ -261,29 +302,36 @@
             font-size: 1rem;
         }
     }
+
     .project-desc {
         & > p {
             font-size: 0.9rem;
         }
     }
+
     .testimonial-container {
         & > div > h6 {
             font-size: 0.9rem;
         }
+
         & > div > p {
             font-size: 1rem;
         }
     }
+
     .other-projects {
         display: grid;
         grid-template-columns: auto;
+
         & > div > h6 {
             font-size: 0.9rem;
         }
+
         & > div > a {
             font-size: 1rem;
         }
     }
+
     .det-buttons {
         grid-template-columns: 120px;
     }

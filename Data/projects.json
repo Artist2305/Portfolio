@@ -1,0 +1,386 @@
+[
+    {
+        "id": "1",
+        "link": "/MagicWonder",
+        "name": "Magic Wander",
+        "date": "2020",
+        "technologies": [
+            {
+
+                "id": "1",
+                "name": "Unity 2D"
+
+            },
+            {
+
+                "id": "2",
+                "name": "C#"
+
+            },
+            {
+
+                "id": "3",
+                "name": "GIMP"
+
+            },
+            {
+
+                "id": "4",
+                "name": "Audacity"
+
+            }
+        ],
+        "roles": [
+            {
+
+                "id": "1",
+                "name": "Game & Gameplay Designer"
+
+            },
+            {
+
+                "id": "2",
+                "name": "Graphic Designer"
+
+            },
+            {
+
+                "id": "3",
+                "name": "C# Programmer"
+
+            }
+        ],
+        "client": "",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+
+                "id": "1",
+                "path": "picturelink1"
+
+            },
+            {
+
+                "id": "2",
+                "path": "picturelink2"
+
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "clientName": "",
+        "download": true,
+        "code": false,
+        "live":  false
+    },
+    {
+        "id": "2",
+        "link": "/SaperLogic",
+        "name": "Saper Logic",
+        "date": "2018",
+        "technologies": [
+            {
+
+                "id": "1",
+                "name": "Unity 2D"
+
+            },
+            {
+
+                "id": "2",
+                "name": "C#"
+
+            },
+            {
+
+                "id": "3",
+                "name": "GIMP"
+
+            },
+            {
+
+                "id": "4",
+                "name": "Audacity"
+
+            }
+        ],
+        "roles": [
+            {
+
+                "id": "1",
+                "name": "Game & Gameplay Designer"
+
+            },
+            {
+
+                "id": "2",
+                "name": "Graphic Designer"
+
+            },
+            {
+
+                "id": "3",
+                "name": "C# Programmer"
+
+            }
+        ],
+        "client": "",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+
+                "id": "1",
+                "path": "picture_link_1"
+
+            },
+            {
+
+                "id": "2",
+                "path": "picture_link_2"
+
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem",
+        "clientName": "",
+        "download": true,
+        "code": false,
+        "live": false
+    },
+    {
+        "id": "3",
+        "link": "/SquarelineTransport",
+        "name": "Squareline Transport - Company Page",
+        "date": "2020",
+        "technologies": [
+            {
+
+                "id": "1",
+                "name": "HTML, SCSS, JAVASCRIPT"
+
+            },
+            {
+
+                "id": "2",
+                "name": "C#"
+
+            }
+        ],
+        "roles": [
+            {
+
+                "id": "1",
+                "name": "Web Designer"
+
+            },
+            {
+
+                "id": "2",
+                "name": "Web Developer"
+
+            }
+        ],
+        "client": "Squareline Transport",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+
+                "id": "1",
+                "path": "picture_link_1"
+
+            },
+            {
+
+                "id": "2",
+                "path": "picture_link_2"
+
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem",
+        "clientName": "Andrei Stanica - Director",
+        "download": false,
+        "code": true,
+        "live": true
+    },
+    {
+        "id": "4",
+        "link": "/MakeUp4",
+        "name": "Makeup Page",
+        "date": "2020",
+        "technologies": [
+            {
+
+                "id": "1",
+                "name": "HTML, SCSS, JAVASCRIPT"
+
+            },
+            {
+
+                "id": "2",
+                "name": "C#"
+
+            },
+            {
+
+                "id": "3",
+                "name": "GATSBY"
+
+            }
+        ],
+        "roles": [
+            {
+
+                "id": "1",
+                "name": "Web Designer"
+
+            },
+            {
+
+                "id": "2",
+                "name": "Web Developer"
+
+            }
+        ],
+        "client": "",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+
+                "id": "1",
+                "path": "picture_link_1"
+
+            },
+            {
+
+                "id": "2",
+                "path": "picture_link_2"
+
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem",
+        "clientName": "",
+        "download": false,
+        "code": true,
+        "live": true
+    },
+    {
+        "id": "5",
+        "link": "/Baber5",
+        "name": "Baber5",
+        "date": "2020",
+        "technologies": [
+            {
+
+                "id": "1",
+                "name": "HTML, SCSS, JAVASCRIPT"
+
+            },
+            {
+
+                "id": "2",
+                "name": "C#"
+
+            },
+            {
+
+                "id": "3",
+                "name": "GATSBY"
+
+            }
+        ],
+        "roles": [
+            {
+
+                "id": "1",
+                "name": "Web Designer"
+
+            },
+            {
+
+                "id": "2",
+                "name": "Web Developer"
+
+            }
+        ],
+        "client": "",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+
+                "id": "1",
+                "path": "picture_link_1"
+
+            },
+            {
+
+                "id": "2",
+                "path": "picture_link_2"
+
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem",
+        "clientName": "",
+        "download": false,
+        "code": true,
+        "live": true
+    },
+    {
+        "id": "6",
+        "link": "/CodeArtist 6",
+        "name": "Code Artist - Programming Blog",
+        "date": "2020",
+        "technologies": [
+            {
+
+                "id": "1",
+                "name": "HTML, SCSS, JAVASCRIPT"
+
+            },
+            {
+
+                "id": "2",
+                "name": "C#"
+
+            },
+            {
+
+                "id": "3",
+                "name": "GATSBY"
+
+            }
+        ],
+        "roles": [
+            {
+
+                "id": "1",
+                "name": "Web Designer"
+
+            },
+            {
+
+                "id": "2",
+                "name": "Web Developer"
+
+            }
+        ],
+        "client": "",
+        "description": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description",
+        "pictures": [
+            {
+
+                "id": "1",
+                "path": "picture_link_1"
+
+            },
+            {
+
+                "id": "2",
+                "path": "picture_link_2"
+
+            }
+        ],
+        "testimonial": "Lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem ipsum description lorem",
+        "clientName": "",
+        "download": false,
+        "code": true,
+        "live": true
+    }
+]

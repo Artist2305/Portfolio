@@ -10,6 +10,10 @@ body {
   color: #424242;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -125,6 +129,33 @@ body {
     filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
   }
 }
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #F8F8F8;
+  border-radius: 50%;
+  border-top-color: #BC8ED9;
+  animation: 1s spin infinite linear;
+  transition: 0.5s;
+}
+
+.info-container {
+  position: relative;
+}
+
+.spin-container {
+  position: absolute;
+  top: 0px;
+}
+.spin-container.anim-in {
+  animation: anim-in ease-in-out 0.5s;
+  animation-fill-mode: forwards;
+}
+.spin-container.anim-out {
+  animation: anim-out ease-in-out 0.5s;
+  animation-fill-mode: forwards;
+}
+
 .form-social-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -142,41 +173,67 @@ body {
   max-width: 175px;
 }
 
-.send-button {
-  cursor: pointer;
-  position: relative;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  margin: 5px 5px 5px 0;
-  padding: 5px 5px 5px 0;
-  transition: 1s;
-}
-.send-button > div > span {
-  margin-left: 15px;
-  font-size: 1.5rem;
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
   font-weight: 900;
-}
-.send-button > div > img {
-  margin-left: 10px;
-  width: 45px;
-  height: 45px;
+  letter-spacing: 3px;
+  background: #BC8ED9;
+  border: none;
+  text-transform: uppercase;
+  padding: 12px;
+  margin: 10px 10px 0px 0px;
+  cursor: pointer;
+  transition: 0.2s linear;
+  position: relative;
+  color: #424242;
 }
 
-.button-background {
-  border-radius: 3px;
+.btn:hover {
+  color: #424242;
+  background: #5DAEEA;
+}
+
+.message-info {
   position: absolute;
-  left: 0;
-  content: "";
-  background-color: lightgrey;
-  width: 0px;
-  height: 50px;
-  transition: 0.4s;
-  z-index: -1;
+  top: 0px;
+  max-width: 250px;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.message-info.anim-in {
+  animation: anim-in ease-in-out 0.5s;
+  animation-fill-mode: forwards;
+}
+.message-info.anim-out {
+  animation: anim-out ease-in-out 0.5s;
+  animation-fill-mode: forwards;
 }
 
-.send-button:hover > .button-background {
-  width: 300px;
+@keyframes anim-in {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes anim-out {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+.btn2:hover::before {
+  transform: scaleY(1);
 }
 
 .contact-me-container {
@@ -297,6 +354,11 @@ textarea {
   text-align: center;
 }
 
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @media only screen and (max-width: 1450px) {
   .contact-me-container h2 {
     font-size: 3.7rem;
@@ -388,12 +450,12 @@ textarea {
     font-size: 1rem;
   }
 
-  .send-button > div > span {
+  .button > div > span {
     margin-left: 15px;
     font-size: 1.1rem;
     font-weight: 900;
   }
-  .send-button > div > span:hover > .button-background {
+  .button > div > span:hover > .button-background {
     width: 250px;
   }
 }

@@ -10,6 +10,10 @@ body {
   color: #424242;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -141,7 +145,7 @@ body {
 
 .projects {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 33.33% 33.33% 33.33%;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -152,6 +156,11 @@ body {
 }
 @media only screen and (max-width: 1030px) {
   .projects {
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
+  }
+}
+@media only screen and (max-width: 617px) {
+  .projects {
+    grid-template-columns: 100%;
   }
 }

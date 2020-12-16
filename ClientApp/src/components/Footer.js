@@ -2,7 +2,6 @@
 import '../css/Footer.css';
 
 const Footer = () => {
-
         return (
             <footer className="row footer-wrap center-all">
                 <div className="footer-content center-all col">

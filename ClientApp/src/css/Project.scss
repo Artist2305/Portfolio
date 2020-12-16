@@ -1,10 +1,36 @@
 ﻿@import 'Variables';
 @import 'Global';
 
+.project-wrapper{
+    position: relative;
+    width:100%;
+    padding-top: 120.72%;
+}
+
 .project {
-    @include marg-pad((5px),(55px 40px 55px 40px));
-    background-color: $page-element-color;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    margin: 10px;
+    width: auto;
+    background-color: transparent;
     filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
+
+    & > img {
+        width: 100%;
+    }
+}
+
+.project-title {
+    width: 100%;
+    position: absolute;
+    height: auto;
+    @include marg-pad(0,(30px 30px 30px 30px));
+    background-color: rgba(0.5, 0.5, 0.5, 0.5);
+    top: 0px;
+    left: 0px;
+    color: white;
+    z-index: 10;
 
     & > h4 {
         @include marg-pad(0,0);
@@ -24,11 +50,11 @@
         text-decoration: none;
         font-size: 1rem;
         letter-spacing: 3px;
-        margin-top: 10px;
-        color: $text-color;
+        margin-top: 5px;
+        color: white;
 
-        &:hover{
-            color:lightslategrey;
+        &:hover {
+            color: lightslategrey;
         }
     }
 
@@ -37,26 +63,47 @@
         font-size: 1rem;
         letter-spacing: 3px;
         margin-top: 10px;
-        color: $text-color;
+        color: #d9d9d9;
     }
 
     & > div > a > img {
         @include marg-pad((0 5px 0px 5px),0);
         width: 15px;
         height: 15px;
-        color: $text-color;
+        color: #d9d9d9;
     }
 }
-.project-image{
-    margin-top:30px;
-    width:100%;
-    height:600px;
-    background-color:darkslategrey;
+
+@media only screen and (max-width:1500px) {
+    .project-title {
+        @include marg-pad(0,(20px 20px 20px 20px));
+
+        & > h4 {
+            font-size: 1.1rem;
+        }
+
+        & > h3 {
+            @include marg-pad(0,(5px 0 5px 0));
+            font-size: 1.3rem;
+        }
+
+        & > div > a {
+            font-size: 0.9rem;
+        }
+
+        & > div > span {
+            font-size: 0.9rem;
+        }
+    }
 }
 
 @media only screen and (max-width:540px) {
     .project {
-        @include marg-pad((5px),(30px 25px 30px 25px));
+        margin: 5px;
+    }
+    .project-title {
+        height: auto;
+        @include marg-pad(0,(15px 15px 15px 15px));
 
         & > h4 {
             font-size: 1rem;
@@ -67,6 +114,7 @@
         }
 
         & > div > a {
+            margin-top: 4px;
             font-size: 1rem;
         }
     }
@@ -74,7 +122,10 @@
 
 @media only screen and (max-width:370px) {
     .project {
-        @include marg-pad((5px),(20px 20px 20px 20px));
+        margin: 5px;
+    }
+    .project-title {
+        @include marg-pad(0,(10px 10px 10px 10px));
 
         & > h4 {
             font-size: 0.8rem;
@@ -86,12 +137,11 @@
         }
 
         & > div > a {
+            margin-top:4px;
             font-size: 0.9rem;
-
         }
     }
     .project-image {
-        margin-top: 15px;
         height: 225px;
     }
 }

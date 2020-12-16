@@ -4,20 +4,6 @@ import '../css/Variables.css';
 import Square from './Square';
 import { data, dataVert } from '../js/SquaresData';
 
-const useWindowSize = () => {
-    const [size, setSize] = useState([window.innerHeight, window.innerWidth]);
-    useEffect(() => {
-        const handleResize = () => {
-            setSize([window.innerWidth, window.innerWidth]);
-        };
-        window.addEventListener("resize", handleResize);
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
-    return size;
-}
-
 const getModifier = () => {
     if (window.innerWidth >= 1370) {
         return 1;
@@ -43,7 +29,6 @@ const getSquareData = () => {
         return dataVert;
     }
 }
-
 const useModifier = () => {
     const [modifier, setModifier] = useState([getModifier()]);
     useEffect(() => {
@@ -70,21 +55,14 @@ const useSquareData = () => {
     }, []);
     return squareData;
 }
-
 const SquaresBackground = (props) => {
-
     const [squareData] = useSquareData();
     const [modifier] = useModifier();
-
     const squares = squareData.map(s => <Square key={s.id} item={s} modifier={modifier} isLoading={props.isLoading}/>);
-
     return(
         <div className="squares-background-container">
              {squares}
         </div >
-    );
-
-
-     
+    );  
 }
 export default SquaresBackground

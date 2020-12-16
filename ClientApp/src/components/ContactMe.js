@@ -1,9 +1,89 @@
-﻿import React from 'react';
+﻿import {Component} from 'react';
 import '../css/ContactMe.css';
 import post from '../svg/envelope.svg';
 
-const ContactMe = () => {
+export default class ContactMe extends Component {
+    constructor(props) {
+        super(props)
 
+        this.state = {
+            name: "",
+            text: "",
+            email: "",
+
+            isMessageDisplay: false,
+            isSending: false,
+            success: false,
+            fail: false
+
+        }
+
+        this.handleNameChange = this.handleNameChange.bind(this);
+        this.handleTextChange = this.handleTextChange.bind(this);
+        this.handleEmailChange = this.handleEmailChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+
+        var data = new FormData();
+    }
+
+    handleNameChange(e) {
+        this.setState({ name: e.target.value});
+    }
+
+    handleTextChange(e) {
+        this.setState({ text: e.target.value});
+    }
+
+    handleEmailChange(e) {
+        this.setState({ email: e.target.value});
+    }
+
+    handleSubmit(e) {
+        this.setState({ isSending: true })
+        e.preventDefault();
+
+   
+            let data = {
+                name: this.state.name,
+                email: this.state.email,
+                text: this.state.text
+            }
+
+            fetch("sendmessage",
+                {
+                    body: JSON.stringify(data),
+                    method: "POST",
+                    headers: {
+                        'Content-Type' : 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        this.setState({
+                            success: true,
+                            isMessageDisplay: true
+                        });
+                        setTimeout(() => { this.setState({isMessageDisplay: false}) }, 4000);
+                        setTimeout(() => { this.setState({success: false}) }, 5000);
+                    } else {
+                        this.setState({
+                            fail: true,
+                            isMessageDisplay: true
+                        });
+                        setTimeout(() => { this.setState({ isMessageDisplay: false }) }, 4000);
+                        setTimeout(() => { this.setState({ fail: false }) }, 5000);
+                    }
+                    this.setState({ isSending: false })
+                });
+        
+
+        this.setState({
+            name: "",
+            email: "",
+            text: ""
+        });
+    }
+
+    render() {
         return (
             <div className="contact-me-container">
                 <div className="col" data-aos="fade-up">
@@ -25,23 +105,28 @@ const ContactMe = () => {
                             <p>Proin laoreet turpis ut euismod fringilla. Quisque viverra ultricies pharetra. Maecenas semper luctus urna. Praesent dolor sem, consectetur id vulputate at, iaculis et nisi. </p>
                         </div>
                         <div className="row">
-                            <form action="" className="contact-form">
+                            <form action="" className="contact-form" onSubmit={this.handleSubmit}>
                                 <div className="col" data-aos="fade-up">
                                     <label >Your Name</label>
-                                    <input type="text" id="name" name="name" placeholder="What's Your name?"></input>
+                                    <input type="text" id="name" name="name" placeholder="What's Your name?" value={this.state.name} onChange={this.handleNameChange} ></input>
                                 </div>
                                 <div className="col" data-aos="fade-up">
                                     <label >Your email address</label>
-                                    <input type="text" id="emailAddress" name="emailAddress" placeholder="What's Your email address?"></input>
+                                    <input type="text" id="email" name="email" placeholder="What's Your email address?" value={this.state.email} onChange={this.handleEmailChange}></input>
                                 </div>
                                 <div className="col" data-aos="fade-up">
                                     <label >Message</label>
-                                    <textarea name="message" placeholder="What's Your message?"></textarea>
-                                    <button className="send-button row center-horz">
-                                        <div><img src={post}></img></div>
+                                    <textarea name="text" id="text" placeholder="What's Your message?" value={this.state.text} onChange={this.handleTextChange}></textarea>
+                                    <button className="btn btn1">
                                         <div><span>SEND MESSAGE</span></div>
                                         <div className="button-background"></div>
                                     </button>
+                                </div>
+                                <div className="center-all col info-container">
+                                    <div className={"spin-container" + (this.state.isSending ? " anim-in active" : " anim-out")}>
+                                        <div className="loading-spinner"></div>
+                                    </div>
+                                    <div className={("message-info ") + (this.state.isMessageDisplay ? "anim-in" : "anim-out")}>{(this.state.success ? "Thank's for response! I will try to answer as soon as i can!" : "") + (this.state.fail ? "Oops, something went wrong..." : "")}</div>
                                 </div>
                             </form>
                         </div>
@@ -61,6 +146,5 @@ const ContactMe = () => {
                 </div>
             </div>
         );
+    }     
 }
-
-export default ContactMe

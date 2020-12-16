@@ -10,6 +10,10 @@ body {
   color: #424242;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .col {
   display: flex;
   flex-direction: column;
@@ -125,93 +129,141 @@ body {
     filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
   }
 }
+.project-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 120.72%;
+}
+
 .project {
-  margin: 5px;
-  padding: 55px 40px 55px 40px;
-  background-color: #F8F8F8;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  margin: 10px;
+  width: auto;
+  background-color: transparent;
   filter: drop-shadow(0px 3px 30px rgba(0, 0, 0, 0.25));
 }
-.project > h4 {
+.project > img {
+  width: 100%;
+}
+
+.project-title {
+  width: 100%;
+  position: absolute;
+  height: auto;
+  margin: 0;
+  padding: 30px 30px 30px 30px;
+  background-color: rgba(1, 1, 1, 0.5);
+  top: 0px;
+  left: 0px;
+  color: white;
+  z-index: 10;
+}
+.project-title > h4 {
   margin: 0;
   padding: 0;
   font-size: 1.2rem;
   font-weight: 900;
   letter-spacing: 4px;
 }
-.project > h3 {
+.project-title > h3 {
   margin: 0;
   padding: 10px 0 10px 0;
   font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: 2px;
 }
-.project > div > a {
+.project-title > div > a {
   text-decoration: none;
   font-size: 1rem;
   letter-spacing: 3px;
-  margin-top: 10px;
-  color: #424242;
+  margin-top: 5px;
+  color: white;
 }
-.project > div > a:hover {
+.project-title > div > a:hover {
   color: lightslategrey;
 }
-.project > div > span {
+.project-title > div > span {
   margin: 0 5px 0px 0;
   padding: 0;
   font-size: 1rem;
   letter-spacing: 3px;
   margin-top: 10px;
-  color: #424242;
+  color: #d9d9d9;
 }
-.project > div > a > img {
+.project-title > div > a > img {
   margin: 0 5px 0px 5px;
   padding: 0;
   width: 15px;
   height: 15px;
-  color: #424242;
+  color: #d9d9d9;
 }
 
-.project-image {
-  margin-top: 30px;
-  width: 100%;
-  height: 600px;
-  background-color: darkslategrey;
+@media only screen and (max-width: 1500px) {
+  .project-title {
+    margin: 0;
+    padding: 20px 20px 20px 20px;
+  }
+  .project-title > h4 {
+    font-size: 1.1rem;
+  }
+  .project-title > h3 {
+    margin: 0;
+    padding: 5px 0 5px 0;
+    font-size: 1.3rem;
+  }
+  .project-title > div > a {
+    font-size: 0.9rem;
+  }
+  .project-title > div > span {
+    font-size: 0.9rem;
+  }
 }
-
 @media only screen and (max-width: 540px) {
   .project {
     margin: 5px;
-    padding: 30px 25px 30px 25px;
   }
-  .project > h4 {
+
+  .project-title {
+    height: auto;
+    margin: 0;
+    padding: 15px 15px 15px 15px;
+  }
+  .project-title > h4 {
     font-size: 1rem;
   }
-  .project > h3 {
+  .project-title > h3 {
     font-size: 1.3rem;
   }
-  .project > div > a {
+  .project-title > div > a {
+    margin-top: 4px;
     font-size: 1rem;
   }
 }
 @media only screen and (max-width: 370px) {
   .project {
     margin: 5px;
-    padding: 20px 20px 20px 20px;
   }
-  .project > h4 {
+
+  .project-title {
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+  }
+  .project-title > h4 {
     font-size: 0.8rem;
   }
-  .project > h3 {
+  .project-title > h3 {
     font-size: 1.1rem;
     margin: 0;
     padding: 5px 0 0 0;
   }
-  .project > div > a {
+  .project-title > div > a {
+    margin-top: 4px;
     font-size: 0.9rem;
   }
 
   .project-image {
-    margin-top: 15px;
     height: 225px;
   }
 }

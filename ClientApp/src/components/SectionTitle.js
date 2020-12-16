@@ -15,7 +15,6 @@ const Project = (props) => {
             <React.Fragment>
                 <div className="section-title" data-aos="fade-up">
                     {squares}
-
                     <h2>SELECTED PROJECTS</h2>
                 </div> 
             </React.Fragment >
